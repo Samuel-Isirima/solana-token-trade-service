@@ -2,7 +2,7 @@ require('dotenv').config();
 const express = require('express');
 const routes = require('./routes');
 const rabbitMQService = require('./services/rabbitMQ.service');
-const { buyToken } = require('./controllers/tokenController');
+const { buyToken, sellToken } = require('./controllers/tokenController');
 
 const app = express();
 const port = process.env.APP_PORT || 3000;
@@ -41,6 +41,10 @@ try {
         {
             queueName: "BUY",
             processor: buyToken
+        },
+        {
+            queueName: "SELL",
+            processor: sellToken
         }
     ]);
 })();
