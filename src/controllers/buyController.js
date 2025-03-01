@@ -22,7 +22,7 @@ import {
 //   const wallet = Keypair.fromSecretKey(WALLET_PRIVATE_KEY);
   const wallet = Keypair.fromSecretKey(new Uint8Array(WALLET_PRIVATE_KEY));
   
-  const SOL_AMOUNT = 0.008; // Amount of SOL to spend
+  const SOL_AMOUNT = 0.003; // Amount of SOL to spend
   const LAMPORTS = SOL_AMOUNT * 1_000_000_000; // Convert to lamports
   
   async function getWalletBalance(publicKey) {
@@ -89,33 +89,9 @@ import {
         const txid = await sendAndConfirmRawTransaction(connection, transaction.serialize());
         console.log(`✅ Swap successful! Transaction ID: ${txid}`);
 
-          // Fetch transaction details
-    const confirmedTransaction = await connection.getTransaction(txid, {
-        commitment: "finalized",
-        maxSupportedTransactionVersion: 0, // For compatibility
-    });
+      
 
-    if (!confirmedTransaction || !confirmedTransaction.meta) {
-        throw new Error("Failed to fetch transaction details");
-    }
-
-    // Extract token balance changes
-    const preBalances = confirmedTransaction.meta.preTokenBalances || [];
-    const postBalances = confirmedTransaction.meta.postTokenBalances || [];
-
-    let boughtAmount = 0;
-
-    for (const postBalance of postBalances) {
-        if (postBalance.mint === tokenMint) {
-            const preBalance = preBalances.find(b => b.accountIndex === postBalance.accountIndex);
-            const preAmount = preBalance ? parseInt(preBalance.uiTokenAmount.amount) : 0;
-            const postAmount = parseInt(postBalance.uiTokenAmount.amount);
-            boughtAmount = postAmount - preAmount; // Amount received
-            break;
-        }
-    }
-
-    return {txid: txid, amount: boughtAmount, solBalanceBeforeBuy: balance}
+    return {txid: txid, amount: 1000, solBalanceBeforeBuy: balance}
   
     } catch (error) 
     {

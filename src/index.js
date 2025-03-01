@@ -2,6 +2,7 @@ import dotenv from "dotenv";
 import express from "express";
 import rabbitMQService from "./services/rabbitMQ.service.js";
 import { buyToken, checkForTokensToSell, sellToken } from "./controllers/tokenController.js";
+import { syncDatabase } from "./database/sync.js";
 dotenv.config();
 
 const app = express();
@@ -10,6 +11,7 @@ const port = process.env.APP_PORT || 3000;
 // Body parsing Middleware
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+
 
 // Create the queues for data
 (async () => {
@@ -42,6 +44,9 @@ try {
 //     }
 // })()
 
+setTimeout(checkForTokensToSell, 5000);
+
+// checkForTokensToSell
 
 // Start processing the queue
 (async () => {

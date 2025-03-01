@@ -3,15 +3,17 @@ import {
   Keypair,
   VersionedTransaction,
   sendAndConfirmRawTransaction,
+  PublicKey
 } from "@solana/web3.js";
 import fetch from "node-fetch";
 import dotenv from "dotenv";
 import getKeypairFromMnemonic from "../helpers/keypair.js";
-
+import { getAssociatedTokenAddress, getAccount } from "@solana/spl-token";
 
 dotenv.config();
 
 const SOLANA_RPC_URL = process.env.SOLANA_RPC_URL;
+const SOLANA_WALLET_ADDRESS = process.env.SOLANA_WALLET_ADDRESS;
 const connection = new Connection(SOLANA_RPC_URL, "confirmed");
 
 // Load wallet from environment variable
@@ -35,7 +37,8 @@ const sellMemeToken = async (tokenMint, tokenAmount) => {
 
     // Check wallet balance before proceeding
     const balanceBeforeSell = await getWalletBalance(wallet.publicKey);
-    console.log(`Wallet Balance: ${balanceBeforeSell} SOL`);
+    tokenAmount = await getTokenBalance(connection, SOLANA_WALLET_ADDRESS, tokenMint)
+    console.log(`Wallet Balance: ${tokenAmount} SOL`);
 
     console.log("✅ Proceeding with the swap...");
 
@@ -95,6 +98,23 @@ const sellMemeToken = async (tokenMint, tokenAmount) => {
     console.error("Error selling meme token:", error);
     return null
   }
+}
+
+
+async function getTokenBalance(connection, walletAddress, tokenMint) {
+    // Derive the associated token address (ATA) for this wallet and token
+    const walletPublicKey = new PublicKey(walletAddress);
+    const tokenMintPublicKey = new PublicKey(tokenMint);
+
+    // Derive the associated token address (ATA)
+    const tokenAccount = await getAssociatedTokenAddress(tokenMintPublicKey, walletPublicKey);
+
+    try {
+        const accountInfo = await getAccount(connection, tokenAccount);
+        return Number(accountInfo.amount); // Token balance in smallest unit
+    } catch (error) {
+        return 0; // No balance or account doesn't exist
+    }
 }
 
 export default sellMemeToken;

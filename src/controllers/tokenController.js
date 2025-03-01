@@ -6,17 +6,17 @@ import Token from "../models/Token.js";
 import buyMemeToken from "./buyController.js";
 import sellMemeToken from "./sellController.js";
 
-const SOLANA_TRACKER_API = 'https://your-api-endpoint.com/price/multi';
+const SOLANA_TRACKER_API = 'https://data.solanatracker.io/price/multi';
 const API_KEY = process.env.SOLANA_TRACKER_API_KEY;
 
-async function writeTokenToDatabase(name, token_mint, buy_marketcap, age, quantity_bought, buytxsignature, solbalancebeforebuy) {
+async function writeTokenToDatabase(name, token_mint, buy_marketcap, age, buy_quantity, buytxsignature, solbalancebeforebuy) {
   try {
     const token = await Token.create({
       name,
       token_mint,
       buy_marketcap,
       age,
-      quantity_bought,
+      buy_quantity,
       sold: false,
       pnl: 0,
       buytxsignature,
@@ -43,7 +43,7 @@ const updateTokenAfterSell = async (tokenMint, sellTxSignature, solBalanceAfterS
       }
   
       // Calculate Profit & Loss (PnL)
-      const pnl = solBalanceAfterSell - token.solbalancebeforebuy;
+      const pnl = solBalanceAfterSell - solBalanceBeforeSell;
   
       // Update the token fields
       await token.update({
@@ -75,7 +75,9 @@ async function getUnsoldTokens() {
 
 
 
-export const checkForTokensToSell = async (unsoldTokens) => {
+export const checkForTokensToSell = async () => {
+    const unsoldTokens = await getUnsoldTokens()
+
     if (!unsoldTokens || unsoldTokens.length === 0) return;
     
     try {
@@ -88,26 +90,36 @@ export const checkForTokensToSell = async (unsoldTokens) => {
             {
                 headers: {
                     'Content-Type': 'application/json',
-                    'Authorization': `Bearer ${API_KEY}`
+                    'x-api-key': `${API_KEY}`
                 }
             }
         );
         
         const marketCapData = response.data;
+        console.log('data fetched from sol tracker')
+        console.log(marketCapData)
         
         // Iterate through tokens and check if market cap increased by 15%
         for (const token of unsoldTokens) {
-            const tokenMarketCap = marketCapData[token.tokenMint]?.marketCap;
+            const tokenMarketCap = parseFloat(marketCapData[token.token_mint]?.marketCap);
             if (!tokenMarketCap) continue; // Skip if no market cap data
             
-            const buyMarketCap = token.buy_marketcap;
+            const buyMarketCap = parseFloat(token.buy_marketcap);
             const priceIncrease = ((tokenMarketCap - buyMarketCap) / buyMarketCap) * 100;
             
             if (priceIncrease >= 15) {
-                const message = { tokenMint: token.tokenMint, marketCap: tokenMarketCap, priceIncrease: priceIncrease };
+                const message = { tokenMint: token.token_mint, marketCap: tokenMarketCap, priceIncrease: priceIncrease };
                 rabbitMQService.sendToQueue("SELL", JSON.stringify(message));
                 console.log(`✅ Sent ${token.tokenMint} to SELL queue. Up ${priceIncrease.toFixed(2)}%`);
             }
+
+            if (priceIncrease <= -30) {     //Sell if token is dying to avoid 100% loss
+                const message = { tokenMint: token.token_mint, marketCap: tokenMarketCap, priceIncrease: priceIncrease };
+                rabbitMQService.sendToQueue("SELL", JSON.stringify(message));
+                console.log(`✅ Sent ${token.tokenMint} to SELL queue. Down ${priceIncrease.toFixed(2)}%`);
+            }
+
+            console.log('PRICE INCREASE ', priceIncrease)
         }
     } catch (error) {
         console.error('Error fetching market cap data:', error);
@@ -118,21 +130,25 @@ export const checkForTokensToSell = async (unsoldTokens) => {
 export const buyToken = async (queueMessage) => {
     var tokenObject = JSON.parse(queueMessage)
     const tokenMint = tokenObject.tokenMint
-    const transaction = buyMemeToken(tokenMint)
+    const transaction = await buyMemeToken(tokenMint)
     if(transaction)
     {
-        writeTokenToDatabase("no-name", tokenMint, tokenObject.filters.marketCapFilter.data.marketcap, "few mins", transaction.amount, transaction.txid, transaction.solBalanceBeforeBuy)
+        console.log('BUY MEMECOIN SUCCESSFUL')
+        console.log(transaction)
+        await writeTokenToDatabase("no-name", tokenMint, parseFloat(tokenObject.filters.marketCapFilter.data.marketCap), 2, transaction.amount, transaction.txid, transaction.solBalanceBeforeBuy)
     }
+    // process.exit(0);
+
 }
 
 
 export const sellToken = async (queueMessage) => {
     var tokenObject = JSON.parse(queueMessage)
     const tokenMint = tokenObject.tokenMint
-    const transaction = sellMemeToken(tokenMint, tokenObject.amount)
+    const transaction = await sellMemeToken(tokenMint, tokenObject.amount)
     if(transaction)
     {
-        updateTokenAfterSell(tokenMint, transaction.txid, transaction.solBalanceAfterSell, tokenObject.marketCap)
+        await updateTokenAfterSell(tokenMint, transaction.txid, transaction.solBalanceAfterSell, transaction.solBalanceBeforeSell, tokenObject.marketCap)
     }
 }
 
