@@ -6,7 +6,7 @@ import { syncDatabase } from "./database/sync.js";
 dotenv.config();
 
 const app = express();
-const port = process.env.APP_PORT || 3000;
+const port = process.env.APP_PORT || 4100;
 
 // Body parsing Middleware
 app.use(express.json());
@@ -44,7 +44,7 @@ try {
 //     }
 // })()
 
-setTimeout(checkForTokensToSell, 5000);
+setInterval(checkForTokensToSell, 6000);
 
 // checkForTokensToSell
 
