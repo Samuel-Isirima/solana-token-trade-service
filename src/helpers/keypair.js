@@ -8,7 +8,7 @@ import {
 
   dotenv.config();
   
-const getKeypairFromMnemonic = () => {
+export const getKeypairFromMnemonic = () => {
     const mnemonic = process.env.PHANTOM_RECOVERY_PHRASE; 
     const seed = bip39.mnemonicToSeedSync(mnemonic);
       // Phantom uses the standard BIP44 derivation path for Solana

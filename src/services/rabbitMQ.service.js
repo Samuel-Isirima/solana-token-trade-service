@@ -1,4 +1,4 @@
-const amqp = require("amqplib");
+import amqp from "amqplib";
 
 class RabbitMQService {
   constructor() {
@@ -6,14 +6,12 @@ class RabbitMQService {
     this.channels = new Map();
   }
 
-  // Ensure a single RabbitMQ connection
   async connect() {
     if (this.connection) return;
     this.connection = await amqp.connect("amqp://localhost");
     console.log("Connected to RabbitMQ");
   }
 
-  // Create or reuse a channel for a specific queue
   async getChannel(queueName) {
     if (!this.connection) {
       throw new Error("RabbitMQ connection is not initialized");
@@ -23,21 +21,23 @@ class RabbitMQService {
       return this.channels.get(queueName);
     }
 
-    const channel = await this.connection.createChannel();
-    await channel.assertQueue(queueName, { durable: true });
-    this.channels.set(queueName, channel);
-    console.log(`Channel created for queue: "${queueName}"`);
-    return channel;
+    const channelPromise = (async () => {
+      const channel = await this.connection.createChannel();
+      await channel.assertQueue(queueName, { durable: true });
+      console.log(`Channel created for queue: "${queueName}"`);
+      return channel;
+    })();
+
+    this.channels.set(queueName, channelPromise);
+    return channelPromise;
   }
 
-  // Send a message to a specific queue
   async sendToQueue(queueName, message) {
     const channel = await this.getChannel(queueName);
-    channel.sendToQueue(queueName, Buffer.from(JSON.stringify(message)), { persistent: true });
-    console.log(`Message sent to "${queueName}":`, message);
+    channel.sendToQueue(queueName, Buffer.from(message), { persistent: true });
+    console.log(`Message sent to "${queueName}": ${message}`);
   }
 
-  // Consume messages from a specific queue
   async consumeQueue(queueName, onMessage) {
     const channel = await this.getChannel(queueName);
     await channel.consume(
@@ -45,8 +45,8 @@ class RabbitMQService {
       (msg) => {
         if (msg) {
           const messageContent = msg.content.toString();
-          console.log(`Received message from ${queueName}:`, messageContent);
-          onMessage(JSON.parse(messageContent));
+          console.log(`Received message from ${queueName}: ${messageContent}`);
+          onMessage(messageContent);
           channel.ack(msg);
         }
       },
@@ -55,9 +55,9 @@ class RabbitMQService {
     console.log(`Started consuming messages from "${queueName}"`);
   }
 
-  // Close all channels and the connection
   async close() {
-    for (const [queueName, channel] of this.channels) {
+    for (const [queueName, channelPromise] of this.channels) {
+      const channel = await channelPromise;
       await channel.close();
       console.log(`Channel for queue "${queueName}" closed`);
     }
@@ -69,14 +69,10 @@ class RabbitMQService {
       this.connection = null;
     }
   }
-}
 
-// Singleton instance
-const rabbitMQService = new RabbitMQService();
-module.exports = rabbitMQService;
 
 // Function to process messages from multiple queues
-const startQueueProcessors = async (queueProcessors) => {
+ async startQueueProcessors(queueProcessors) {
   await rabbitMQService.connect();
 
   for (const { queueName, processor } of queueProcessors) {
@@ -88,6 +84,10 @@ const startQueueProcessors = async (queueProcessors) => {
       }
     });
   }
-};
+}
 
-module.exports.startQueueProcessors = startQueueProcessors;
+}
+
+const rabbitMQService = new RabbitMQService();
+export default rabbitMQService
+

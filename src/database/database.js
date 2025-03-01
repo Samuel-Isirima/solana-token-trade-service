@@ -1,9 +1,9 @@
-const { Sequelize } = require('sequelize');
+import { Sequelize } from 'sequelize';
 
-const sequelize = new Sequelize('your_database_name', 'your_database_user', 'your_database_password', {
+const sequelize = new Sequelize('degeonter_transaction_module', 'root', '', {
   host: 'localhost', // Change if using a remote DB
   dialect: 'mysql',
   logging: false,
 });
 
-module.exports = sequelize;
+export default sequelize

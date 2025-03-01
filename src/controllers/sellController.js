@@ -6,7 +6,7 @@ import {
 } from "@solana/web3.js";
 import fetch from "node-fetch";
 import dotenv from "dotenv";
-import getKeypairFromMnemonic from "../helpers/keypair";
+import getKeypairFromMnemonic from "../helpers/keypair.js";
 
 
 dotenv.config();
@@ -34,8 +34,8 @@ const sellMemeToken = async (tokenMint, tokenAmount) => {
     console.log("🔍 Checking balance before selling...");
 
     // Check wallet balance before proceeding
-    const balance = await getWalletBalance(wallet.publicKey);
-    console.log(`Wallet Balance: ${balance} SOL`);
+    const balanceBeforeSell = await getWalletBalance(wallet.publicKey);
+    console.log(`Wallet Balance: ${balanceBeforeSell} SOL`);
 
     console.log("✅ Proceeding with the swap...");
 
@@ -84,7 +84,12 @@ const sellMemeToken = async (tokenMint, tokenAmount) => {
       transaction.serialize()
     );
     console.log(`✅ Swap successful! Transaction ID: ${txid}`);
-    return txid
+    
+    // Check wallet balance before proceeding
+    const balanceAfterSell = await getWalletBalance(wallet.publicKey);
+    console.log(`Wallet Balance after selling: ${balanceAfterSell} SOL`);
+
+    return {txid: txid, solBalanceBeforeSell: balanceBeforeSell, solBalanceAfterSell: balanceAfterSell}
 
   } catch (error) {
     console.error("Error selling meme token:", error);

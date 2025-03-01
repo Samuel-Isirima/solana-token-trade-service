@@ -1,10 +1,11 @@
 import axios from 'axios';
-import rabbitmqService from './rabbitmqService'; // Assuming you have a RabbitMQ service
+import rabbitMQService from '../services/rabbitMQ.service.js'; // Assuming you have a RabbitMQ service
 
 
-const Token = require('../models/Token');
-const { default: buyMemeToken } = require('./buyController');
-const { default: sellMemeToken } = require('./sellController');
+import Token from "../models/Token.js";
+import buyMemeToken from "./buyController.js";
+import sellMemeToken from "./sellController.js";
+
 const SOLANA_TRACKER_API = 'https://your-api-endpoint.com/price/multi';
 const API_KEY = process.env.SOLANA_TRACKER_API_KEY;
 
@@ -32,7 +33,7 @@ async function writeTokenToDatabase(name, token_mint, buy_marketcap, age, quanti
 }
 
 
-const updateTokenAfterSell = async (tokenMint, sellTxSignature, solBalanceAfterSell, sellMarketCap) => {
+const updateTokenAfterSell = async (tokenMint, sellTxSignature, solBalanceAfterSell, solBalanceBeforeSell, sellMarketCap) => {
     try {
       // Find the token by its mint address
       const token = await Token.findOne({ where: { token_mint: tokenMint } });
@@ -48,6 +49,7 @@ const updateTokenAfterSell = async (tokenMint, sellTxSignature, solBalanceAfterS
       await token.update({
         selltxsignature: sellTxSignature,
         solbalanceaftersell: solBalanceAfterSell,
+        solbalancebeforeSell: solBalanceBeforeSell,
         sell_marketcap: sellMarketCap,
         sold: true,
         pnl: pnl, // Store profit/loss
@@ -73,12 +75,12 @@ async function getUnsoldTokens() {
 
 
 
-const checkForTokensToSell = async (unsoldTokens) => {
+export const checkForTokensToSell = async (unsoldTokens) => {
     if (!unsoldTokens || unsoldTokens.length === 0) return;
     
     try {
         // Extract token mints from unsold tokens
-        const tokenMints = unsoldTokens.map(token => token.tokenMint);
+        const tokenMints = unsoldTokens.map(token => token.token_mint);
         
         // Make API request to get market cap data
         const response = await axios.post(SOLANA_TRACKER_API, 
@@ -102,8 +104,8 @@ const checkForTokensToSell = async (unsoldTokens) => {
             const priceIncrease = ((tokenMarketCap - buyMarketCap) / buyMarketCap) * 100;
             
             if (priceIncrease >= 15) {
-                const message = { tokenMint: token.tokenMint, marketCap: tokenMarketCap, priceIncrease };
-                rabbitmqService.sendToQueue("SELL", JSON.stringify(message));
+                const message = { tokenMint: token.tokenMint, marketCap: tokenMarketCap, priceIncrease: priceIncrease };
+                rabbitMQService.sendToQueue("SELL", JSON.stringify(message));
                 console.log(`✅ Sent ${token.tokenMint} to SELL queue. Up ${priceIncrease.toFixed(2)}%`);
             }
         }
@@ -113,19 +115,19 @@ const checkForTokensToSell = async (unsoldTokens) => {
 };
 
 
-const buyToken = async (queueMessage) => {
-    var tokenObject = JSON.parse(queue_message)
+export const buyToken = async (queueMessage) => {
+    var tokenObject = JSON.parse(queueMessage)
     const tokenMint = tokenObject.tokenMint
     const transaction = buyMemeToken(tokenMint)
     if(transaction)
     {
-        writeTokenToDatabase(tokenObject.name, tokenMint, tokenObject.marketcap, tokenObject.age, transaction.amount, transaction.txid, transaction.solBalanceBeforeBuy)
+        writeTokenToDatabase("no-name", tokenMint, tokenObject.filters.marketCapFilter.data.marketcap, "few mins", transaction.amount, transaction.txid, transaction.solBalanceBeforeBuy)
     }
 }
 
 
-const sellToken = async (queueMessage) => {
-    var tokenObject = JSON.parse(queue_message)
+export const sellToken = async (queueMessage) => {
+    var tokenObject = JSON.parse(queueMessage)
     const tokenMint = tokenObject.tokenMint
     const transaction = sellMemeToken(tokenMint, tokenObject.amount)
     if(transaction)
@@ -134,5 +136,4 @@ const sellToken = async (queueMessage) => {
     }
 }
 
-module.exports.buyToken = buyToken
-module.exports.sellToken = sellToken
+

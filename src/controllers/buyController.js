@@ -8,11 +8,8 @@ import {
     Keypair
   } from "@solana/web3.js";
   import fetch from "node-fetch";
-  import bs58 from "bs58";
   import dotenv from "dotenv";
-  import * as bip39 from 'bip39';
-  import { derivePath } from 'ed25519-hd-key';
-import getKeypairFromMnemonic from "../helpers/keypair";
+  import getKeypairFromMnemonic from "../helpers/keypair.js";
 
   dotenv.config();
   

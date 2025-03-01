@@ -1,8 +1,8 @@
-require('dotenv').config();
-const express = require('express');
-const routes = require('./routes');
-const rabbitMQService = require('./services/rabbitMQ.service');
-const { buyToken, sellToken } = require('./controllers/tokenController');
+import dotenv from "dotenv";
+import express from "express";
+import rabbitMQService from "./services/rabbitMQ.service.js";
+import { buyToken, checkForTokensToSell, sellToken } from "./controllers/tokenController.js";
+dotenv.config();
 
 const app = express();
 const port = process.env.APP_PORT || 3000;
@@ -33,6 +33,14 @@ try {
 } catch (error) {
     console.log(`An error occurred while trying to initialize service: ${error.message}`);
 }
+
+// (async () => {
+//     while (true) {
+//       await checkForTokensToSell(); // Wait for the function to finish
+//       console.log("Waiting 1 second before the next call...")
+//       await new Promise((resolve) => setTimeout(resolve, 1000)) // Wait 1 second
+//     }
+// })()
 
 
 // Start processing the queue

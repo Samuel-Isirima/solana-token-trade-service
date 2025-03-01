@@ -1,5 +1,5 @@
-const { DataTypes, Model } = require('sequelize');
-const sequelize = require('../database/database');
+import { DataTypes, Model } from 'sequelize';
+import sequelize from '../database/database.js';
 
 class Token extends Model {}
 
@@ -16,7 +16,8 @@ Token.init(
     buytxsignature: { type: DataTypes.STRING, allowNull: false },
     selltxsignature: { type: DataTypes.STRING, allowNull: true },
     solbalancebeforebuy: { type: DataTypes.FLOAT, allowNull: false },
-    solbalanceaftersell: { type: DataTypes.FLOAT, allowNull: true }
+    solbalanceaftersell: { type: DataTypes.FLOAT, allowNull: true },
+    solbalancebeforesell: { type: DataTypes.FLOAT, allowNull: true }
   },
   {
     sequelize,
@@ -25,4 +26,4 @@ Token.init(
   }
 );
 
-module.exports = Token;
+export default Token;
