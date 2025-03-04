@@ -3,6 +3,7 @@ import express from "express";
 import rabbitMQService from "./services/rabbitMQ.service.js";
 import { buyToken, checkForTokensToSell, sellToken } from "./controllers/tokenController.js";
 import { syncDatabase } from "./database/sync.js";
+import './logger.js';
 dotenv.config();
 
 const app = express();

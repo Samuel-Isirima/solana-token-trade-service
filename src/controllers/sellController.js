@@ -95,7 +95,7 @@ const sellMemeToken = async (tokenMint, tokenAmount) => {
     return {txid: txid, solBalanceBeforeSell: balanceBeforeSell, solBalanceAfterSell: balanceAfterSell}
 
   } catch (error) {
-    console.error("Error selling meme token:", error);
+    console.error(`Error selling meme token: ${tokenMint}`, error);
     return null
   }
 }
