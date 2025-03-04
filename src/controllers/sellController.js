@@ -33,14 +33,13 @@ async function getWalletBalance(publicKey) {
 
 const sellMemeToken = async (tokenMint, tokenAmount) => {
   try {
-    console.log("🔍 Checking balance before selling...");
 
     // Check wallet balance before proceeding
     const balanceBeforeSell = await getWalletBalance(wallet.publicKey);
     tokenAmount = await getTokenBalance(connection, SOLANA_WALLET_ADDRESS, tokenMint)
-    console.log(`Wallet Balance: ${tokenAmount} SOL`);
+    // console.log(`Wallet Balance: ${tokenAmount} SOL`);
 
-    console.log("✅ Proceeding with the swap...");
+    // console.log("✅ Proceeding with the swap...");
 
     // Fetch the best swap route from Jupiter
     const quoteUrl = `https://quote-api.jup.ag/v6/quote?inputMint=${tokenMint}&outputMint=So11111111111111111111111111111111111111112&amount=${tokenAmount}&slippageBps=50`;
@@ -51,7 +50,7 @@ const sellMemeToken = async (tokenMint, tokenAmount) => {
       throw new Error("Failed to get swap route");
     }
 
-    console.log("Best Route:", quote.routePlan);
+    // console.log("Best Route:", quote.routePlan);
 
     // Build the swap transaction
     const swapUrl = "https://quote-api.jup.ag/v6/swap";
@@ -71,7 +70,7 @@ const sellMemeToken = async (tokenMint, tokenAmount) => {
       throw new Error("Failed to create swap transaction");
     }
 
-    console.log("Swap Transaction Fetched");
+    // console.log("Swap Transaction Fetched");
 
     // Decode transaction
     const transaction = VersionedTransaction.deserialize(
@@ -86,11 +85,11 @@ const sellMemeToken = async (tokenMint, tokenAmount) => {
       connection,
       transaction.serialize()
     );
-    console.log(`✅ Swap successful! Transaction ID: ${txid}`);
+    console.log(`✅ Swap successful! \n Token ${tokenMint} sold successfully. \n Transaction hash: ${txid}`);
     
     // Check wallet balance before proceeding
     const balanceAfterSell = await getWalletBalance(wallet.publicKey);
-    console.log(`Wallet Balance after selling: ${balanceAfterSell} SOL`);
+    // console.log(`Wallet Balance after selling: ${balanceAfterSell} SOL`);
 
     return {txid: txid, solBalanceBeforeSell: balanceBeforeSell, solBalanceAfterSell: balanceAfterSell}
 

@@ -46,7 +46,7 @@ import {
         // return;
       }
   
-      console.log("✅ Sufficient balance, proceeding with the swap...");
+    //   console.log("✅ Sufficient balance, proceeding with the swap...");
   
       // Fetch the best swap route from Jupiter
       const quoteUrl = `https://quote-api.jup.ag/v6/quote?inputMint=So11111111111111111111111111111111111111112&outputMint=${tokenMint}&amount=${LAMPORTS}&slippageBps=50`;
@@ -57,7 +57,7 @@ import {
         throw new Error("Failed to get swap route");
       }
   
-      console.log("Best Route:", quote.routePlan);
+    //   console.log("Best Route:", quote.routePlan);
     //   return
       // Build the swap transaction
       const swapUrl = "https://quote-api.jup.ag/v6/swap";
@@ -77,7 +77,7 @@ import {
         throw new Error("Failed to create swap transaction");
       }
   
-      console.log("Swap Transaction Fetched");
+    //   console.log("Swap Transaction Fetched");
   
         // Decode transaction
         const transaction = VersionedTransaction.deserialize(Buffer.from(swapTransaction, "base64"));
@@ -87,7 +87,7 @@ import {
 
         // Send the signed transaction
         const txid = await sendAndConfirmRawTransaction(connection, transaction.serialize());
-        console.log(`✅ Swap successful! Transaction ID: ${txid}`);
+        console.log(`✅ Swap successful! \n Token ${tokenMint} bought with ${SOL_AMOUNT} SOL. \n Transaction hash: ${txid}`);
 
       
 

@@ -23,7 +23,7 @@ async function writeTokenToDatabase(name, token_mint, buy_marketcap, age, buy_qu
       solbalancebeforebuy
     });
 
-    console.log(`Token ${token.name} added successfully.`);
+    // console.log(`Token ${token.name} added successfully.`);
     return true
   } 
   catch (error) 
@@ -55,7 +55,7 @@ const updateTokenAfterSell = async (tokenMint, sellTxSignature, solBalanceAfterS
         pnl: priceIncrease.toFixed(2), // Store profit/loss
       });
   
-      console.log(`Token ${tokenMint} updated successfully after selling.`);
+    //   console.log(`Token ${tokenMint} updated successfully after selling.`);
     } catch (error) {
       console.error(`Error updating token after sell: ${error.message}`);
     }
@@ -116,7 +116,7 @@ export const checkForTokensToSell = async () => {
             if (priceIncrease <= -30) {     //Sell if token is dying to avoid 100% loss
                 const message = { tokenMint: token.token_mint, marketCap: tokenMarketCap, priceIncrease: priceIncrease };
                 rabbitMQService.sendToQueue("SELL", JSON.stringify(message));
-                console.log(`✅ Sent ${token.token_mint} to SELL queue. Down ${priceIncrease.toFixed(2)}%`);
+                console.log(`💔 Sent ${token.token_mint} to SELL queue. Down ${priceIncrease.toFixed(2)}%`);
             }
 
             console.log('Price increase for '+token.token_mint, priceIncrease)
@@ -138,9 +138,9 @@ export const buyToken = async (queueMessage) => {
     const transaction = await buyMemeToken(tokenMint)
     if(transaction)
     {
-        console.log('BUY MEMECOIN SUCCESSFUL')
-        console.log(transaction)
-        await writeTokenToDatabase("no-name", tokenMint, parseFloat(tokenObject.filters.marketCapFilter.data.marketCap), 2, 10000, transaction.txid, transaction.solBalanceBeforeBuy)
+        // console.log('BUY MEMECOIN SUCCESSFUL')
+        // console.log(transaction)
+        await writeTokenToDatabase("token", tokenMint, parseFloat(tokenObject.filters.marketCapFilter.data.marketCap), 2, 10000, transaction.txid, transaction.solBalanceBeforeBuy)
     }
 
     // process.exit(0);

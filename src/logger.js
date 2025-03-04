@@ -49,6 +49,31 @@ const sendToTelegram = async (message) => {
     }
   };
   
+
+
+// async function sendToTelegram(message) {
+    
+//     let retries = 3; // Number of retries
+//     let delay = 5000; // Delay in milliseconds (5 seconds)
+
+//         try {
+//             await axios.post(TELEGRAM_API_URL, {
+//                 chat_id: TELEGRAM_CHAT_ID,
+//                 text: message,
+//             });
+//             console.log("Log sent successfully.");
+//             return;
+//         } catch (error) {
+//             if (error.response && error.response.status === 429) {
+//                 console.log(`Rate limited. Retrying in ${delay / 1000} seconds...`);
+//                 await new Promise(resolve => setTimeout(resolve, delay));
+//             } else {
+//                 console.error("Failed to send log:", error.message);
+//             }
+//         }
+// }
+
+
   // Override console.log and console.error
   console.log = (...args) => {
     const message = args.join(' ');
