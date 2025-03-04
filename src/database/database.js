@@ -1,7 +1,14 @@
 import { Sequelize } from 'sequelize';
+import dotenv from "dotenv";
+dotenv.config();
 
-const sequelize = new Sequelize('degeonter_transaction_module', 'root', '', {
-  host: 'localhost', // Change if using a remote DB
+const DB_DATABASE = process.env.DB_DATABASE
+const DB_USERNAME = process.env.DB_USERNAME
+const DB_PASSWORD = process.env.DB_PASSWORD
+const DB_HOST = process.env.DB_HOST
+
+const sequelize = new Sequelize(DB_DATABASE, DB_USERNAME, DB_PASSWORD, {
+  host: DB_HOST, // Change if using a remote DB
   dialect: 'mysql',
   logging: false,
 });
