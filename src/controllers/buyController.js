@@ -22,7 +22,7 @@ import {
 //   const wallet = Keypair.fromSecretKey(WALLET_PRIVATE_KEY);
   const wallet = Keypair.fromSecretKey(new Uint8Array(WALLET_PRIVATE_KEY));
   
-  const SOL_AMOUNT = 0.003; // Amount of SOL to spend
+  const SOL_AMOUNT = 0.015; // Amount of SOL to spend
   const LAMPORTS = SOL_AMOUNT * 1_000_000_000; // Convert to lamports
   
   async function getWalletBalance(publicKey) {

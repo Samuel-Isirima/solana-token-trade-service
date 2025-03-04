@@ -33,7 +33,7 @@ async function writeTokenToDatabase(name, token_mint, buy_marketcap, age, buy_qu
 }
 
 
-const updateTokenAfterSell = async (tokenMint, sellTxSignature, solBalanceAfterSell, solBalanceBeforeSell, sellMarketCap) => {
+const updateTokenAfterSell = async (tokenMint, sellTxSignature, solBalanceAfterSell, solBalanceBeforeSell, sellMarketCap, priceIncrease) => {
     try {
       // Find the token by its mint address
       const token = await Token.findOne({ where: { token_mint: tokenMint } });
@@ -52,7 +52,7 @@ const updateTokenAfterSell = async (tokenMint, sellTxSignature, solBalanceAfterS
         solbalancebeforeSell: solBalanceBeforeSell,
         sell_marketcap: sellMarketCap,
         sold: true,
-        pnl: pnl, // Store profit/loss
+        pnl: priceIncrease.toFixed(2), // Store profit/loss
       });
   
       console.log(`Token ${tokenMint} updated successfully after selling.`);
@@ -119,7 +119,7 @@ export const checkForTokensToSell = async () => {
                 console.log(`✅ Sent ${token.token_mint} to SELL queue. Down ${priceIncrease.toFixed(2)}%`);
             }
 
-            console.log('PRICE INCREASE ', priceIncrease)
+            console.log('Price increase for '+token.token_mint, priceIncrease)
         }
     } catch (error) {
         console.error('Error fetching market cap data:', error);
@@ -132,22 +132,20 @@ export const buyToken = async (queueMessage) => {
     const tokenMint = tokenObject.tokenMint
 
     //Check if we had already traded this token before
-    const trade = await Token.find({ where: { token_mint: tokenMint } })
+    const trade = await Token.findOne({ where: { token_mint: tokenMint } })
     if(trade)
         return    //Dont buy again
-    /*
     const transaction = await buyMemeToken(tokenMint)
     if(transaction)
     {
         console.log('BUY MEMECOIN SUCCESSFUL')
         console.log(transaction)
-        await writeTokenToDatabase("no-name", tokenMint, parseFloat(tokenObject.filters.marketCapFilter.data.marketCap), 2, transaction.amount, transaction.txid, transaction.solBalanceBeforeBuy)
+        await writeTokenToDatabase("no-name", tokenMint, parseFloat(tokenObject.filters.marketCapFilter.data.marketCap), 2, 10000, transaction.txid, transaction.solBalanceBeforeBuy)
     }
-    */
 
     // process.exit(0);
     //For testing
-    await writeTokenToDatabase("no-name", tokenMint, parseFloat(tokenObject.filters.marketCapFilter.data.marketCap), 2, 1000, "4subasieowihsioaava", 110)
+    //await writeTokenToDatabase("no-name", tokenMint, parseFloat(tokenObject.filters.marketCapFilter.data.marketCap), 2, 1000, "4subasieowihsioaava", 110)
 
 }
 
@@ -155,15 +153,13 @@ export const buyToken = async (queueMessage) => {
 export const sellToken = async (queueMessage) => {
     var tokenObject = JSON.parse(queueMessage)
     const tokenMint = tokenObject.tokenMint
-    /*
     const transaction = await sellMemeToken(tokenMint, tokenObject.amount)
     if(transaction)
     {
-        await updateTokenAfterSell(tokenMint, transaction.txid, transaction.solBalanceAfterSell, transaction.solBalanceBeforeSell, tokenObject.marketCap)
+        await updateTokenAfterSell(tokenMint, transaction.txid, transaction.solBalanceAfterSell, transaction.solBalanceBeforeSell, tokenObject.marketCap, tokenObject.priceIncrease)
     }
-    */
     //For testing
-    await updateTokenAfterSell(tokenMint, "tid", 110, 120, tokenObject.marketCap)
+    //await updateTokenAfterSell(tokenMint, "tid", 110, 120, tokenObject.marketCap, tokenObject.priceIncrease)
 
 }
 
