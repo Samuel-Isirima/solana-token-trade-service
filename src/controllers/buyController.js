@@ -43,7 +43,7 @@ import {
   
       if (balance < SOL_AMOUNT) {
         console.error("❌ Insufficient SOL balance. Transaction aborted.");
-        // return;
+        return;
       }
   
     //   console.log("✅ Sufficient balance, proceeding with the swap...");

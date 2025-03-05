@@ -417,3 +417,13 @@
 [2025-03-04T21:59:17.959Z] [INFO] Started consuming messages from "SELL"
 [2025-03-04T21:59:17.961Z] [INFO] Started consuming messages from "BUY"
 [2025-03-04T21:59:18.330Z] [INFO] Database synced successfully.
+[2025-03-05T19:20:58.899Z] [ERROR] (node:81062) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+[2025-03-05T19:20:58.984Z] [INFO] Buying and selling service running on http://localhost:4100
+[2025-03-05T19:20:59.041Z] [INFO] Connected to RabbitMQ
+[2025-03-05T19:20:59.047Z] [INFO] Connected to RabbitMQ
+[2025-03-05T19:20:59.062Z] [INFO] Channel created for queue: "SELL"
+[2025-03-05T19:20:59.064Z] [INFO] Channel created for queue: "BUY"
+[2025-03-05T19:20:59.074Z] [INFO] Started consuming messages from "BUY"
+[2025-03-05T19:20:59.075Z] [INFO] Started consuming messages from "SELL"
+[2025-03-05T19:20:59.463Z] [INFO] Database synced successfully.
