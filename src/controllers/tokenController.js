@@ -119,6 +119,13 @@ export const checkForTokensToSell = async () => {
                 console.log(`💔 Sent ${token.token_mint} to SELL queue. Down ${priceIncrease.toFixed(2)}%`);
             }
 
+            if(getMinutesSinceCreation(token.createdAt) >= 5 && priceIncrease > -10 && priceIncrease < 10)
+            {
+                const message = { tokenMint: token.token_mint, marketCap: tokenMarketCap, priceIncrease: priceIncrease };
+                rabbitMQService.sendToQueue("SELL", JSON.stringify(message));
+                console.log(`💔 Sent ${token.token_mint} to SELL queue. No trades. Price still at ${priceIncrease.toFixed(2)}% after 5 minutes`);
+            }
+
             console.log('Price increase for '+token.token_mint, priceIncrease)
         }
     } catch (error) {
@@ -136,7 +143,7 @@ export const buyToken = async (queueMessage) => {
     if(trade)
         return    //Dont buy again
     const transaction = await buyMemeToken(tokenMint)
-    if(transaction)
+    if(transaction?.txid)
     {
         // console.log('BUY MEMECOIN SUCCESSFUL')
         // console.log(transaction)
@@ -164,3 +171,8 @@ export const sellToken = async (queueMessage) => {
 }
 
 
+const getMinutesSinceCreation = (createdAt) => {
+    const currentTime = new Date();
+    const diffInMilliseconds = currentTime.getTime() - createdAt.getTime();
+    return Math.floor(diffInMilliseconds / (1000 * 60)); // Convert milliseconds to minutes
+  }

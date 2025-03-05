@@ -45,7 +45,7 @@ try {
 //     }
 // })()
 
-setInterval(checkForTokensToSell, 30000);
+setInterval(checkForTokensToSell, 6000);
 
 // checkForTokensToSell
 
