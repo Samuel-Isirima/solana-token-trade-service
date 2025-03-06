@@ -136,7 +136,7 @@ export const checkForTokensToSell = async () => {
 
 export const buyToken = async (queueMessage) => {
     var tokenObject = JSON.parse(queueMessage)
-    const tokenMint = tokenObject.tokenMint
+    const tokenMint = tokenObject.token.mintAddress
 
     //Check if we had already traded this token before
     const trade = await Token.findOne({ where: { token_mint: tokenMint } })
@@ -147,7 +147,7 @@ export const buyToken = async (queueMessage) => {
     {
         // console.log('BUY MEMECOIN SUCCESSFUL')
         // console.log(transaction)
-        await writeTokenToDatabase("token", tokenMint, parseFloat(tokenObject.filters.marketCapFilter.data.marketCap), 2, 10000, transaction.txid, transaction.solBalanceBeforeBuy)
+        await writeTokenToDatabase("token", tokenMint, parseFloat(tokenObject.data.marketCap), 2, 10000, transaction.txid, transaction.solBalanceBeforeBuy)
     }
 
     // process.exit(0);

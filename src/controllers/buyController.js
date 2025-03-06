@@ -42,7 +42,7 @@ import {
       console.log(`Wallet Balance: ${balance} SOL`);
   
       if (balance < SOL_AMOUNT) {
-        console.error("❌ Insufficient SOL balance. Transaction aborted.");
+        console.error(`❌ Insufficient SOL balance to buy ${tokenMint}. Transaction aborted.`);
         return;
       }
   
