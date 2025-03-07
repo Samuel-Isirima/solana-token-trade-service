@@ -427,3 +427,474 @@
 [2025-03-05T19:20:59.074Z] [INFO] Started consuming messages from "BUY"
 [2025-03-05T19:20:59.075Z] [INFO] Started consuming messages from "SELL"
 [2025-03-05T19:20:59.463Z] [INFO] Database synced successfully.
+[2025-03-07T14:51:09.272Z] [ERROR] (node:425) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+[2025-03-07T14:51:09.330Z] [INFO] Buying and selling service running on http://localhost:4100
+[2025-03-07T14:51:09.378Z] [INFO] Connected to RabbitMQ
+[2025-03-07T14:51:09.381Z] [INFO] Connected to RabbitMQ
+[2025-03-07T14:51:09.395Z] [INFO] Channel created for queue: "BUY"
+[2025-03-07T14:51:09.398Z] [INFO] Channel created for queue: "SELL"
+[2025-03-07T14:51:09.404Z] [INFO] Started consuming messages from "SELL"
+[2025-03-07T14:51:09.424Z] [INFO] Received message from BUY: {"token":{"mintAddress":"3Guw8MhVmkpGCcvzQ46ViFEGL9a2vFGVNXKzigr2pump"},"canBuy":[true,true,true,true],"comment":["✅ Token Market Cap is still above 50% of ATH. Token may be able to recover"],"data":{"marketCap":9424.832597159126}}
+[2025-03-07T14:51:09.427Z] [INFO] Received message from BUY: {"token":{"mintAddress":"AoAxqb3juQoN6efPEZhwu1wtB3XJocqFb8QFLCzh9EYH"},"canBuy":[true,true,true],"comment":["✅ Token Market Cap is still above 50% of ATH. Token may be able to recover"],"data":{"marketCap":42110742.184544496}}
+[2025-03-07T14:51:09.430Z] [INFO] Received message from BUY: {"token":{"mintAddress":"2Gi5hQbKfqwDpVqeR68NJSTbW9icy4dpyQEbJJRDmoon"},"canBuy":[true,true,true],"comment":["✅ Token Market Cap is still above 50% of ATH. Token may be able to recover"],"data":{"marketCap":34132.566527493145}}
+[2025-03-07T14:51:09.432Z] [INFO] Received message from BUY: {"token":{"mintAddress":"CEDMrEjHK1mLAFBZ58MW1Da7HVpLufzyDn6hLxxUpump"},"canBuy":[true,true,true,true],"comment":["✅ Token Market Cap is still above 50% of ATH. Token may be able to recover"],"data":{"marketCap":18278.99550078705}}
+[2025-03-07T14:51:09.433Z] [INFO] Received message from BUY: {"token":{"mintAddress":"3s7Nq2AGc7D6Mj6FYk6nUipN7wE2ViVyGwunf2Rxpump"},"canBuy":[true,true,true,true],"comment":["✅ Token Market Cap is still above 50% of ATH. Token may be able to recover"],"data":{"marketCap":8798.694694523667}}
+[2025-03-07T14:51:09.435Z] [INFO] Received message from BUY: {"token":{"mintAddress":"E9GwE7R4LcoRV9ogZp5tBXVJ4rPFE6gruLdJaA9pump"},"canBuy":[true,true,true,true],"comment":["✅ Token Market Cap is still above 50% of ATH. Token may be able to recover"],"data":{"marketCap":16696.431367729918}}
+[2025-03-07T14:51:09.436Z] [INFO] Received message from BUY: {"token":{"mintAddress":"4uYBEpKKwdpUe7bb6GtdBmmrbn1ZjaYv4L2boVnZpUM4"},"canBuy":[true,true,true,true],"comment":["✅ Token Market Cap is still above 50% of ATH. Token may be able to recover"],"data":{"marketCap":7912.449357033181}}
+[2025-03-07T14:51:09.438Z] [INFO] Received message from BUY: {"token":{"mintAddress":"6XCTLfEye9XHMNZhyQjyPrz7Kykd3XGTwKviTqL5pump"},"canBuy":[true,true,true,true],"comment":["✅ Token Market Cap is still above 50% of ATH. Token may be able to recover"],"data":{"marketCap":14009.228314439752}}
+[2025-03-07T14:51:09.440Z] [INFO] Received message from BUY: {"token":{"mintAddress":"Cqc7enAZdrUk6L4RLSbryQtLhqXfCaQSwGV7F31upump"},"canBuy":[true,true,true,true],"comment":["✅ Token Market Cap is still above 50% of ATH. Token may be able to recover"],"data":{"marketCap":12316.500586601349}}
+[2025-03-07T14:51:09.441Z] [INFO] Received message from BUY: {"token":{"mintAddress":"J8rZcqDBXWCtmz9C4qhdfiRA5ZQQjasa5aeghbnxpump"},"canBuy":[true,true,true],"comment":["✅ Token Market Cap is still above 50% of ATH. Token may be able to recover"],"data":{"marketCap":45229.48993340856}}
+[2025-03-07T14:51:09.444Z] [INFO] Started consuming messages from "BUY"
+[2025-03-07T14:51:09.452Z] [INFO] Received message from BUY: {"token":{"mintAddress":"8tUKVcj9sEb9msAmBhmj76fiNR33pKrui1sXYsE5pump"},"canBuy":[true,true,true,true],"comment":["✅ Token Market Cap is still above 50% of ATH. Token may be able to recover"],"data":{"marketCap":15069.152602225457}}
+[2025-03-07T14:51:09.454Z] [INFO] Received message from BUY: {"token":{"mintAddress":"A3sQm3tKGpVoWJoRiCr2cN8K5xRexCdxS1eUwf2Dpump"},"canBuy":[true,true,true,true],"comment":["✅ Token Market Cap is still above 50% of ATH. Token may be able to recover"],"data":{"marketCap":7249.248083201}}
+[2025-03-07T14:51:09.455Z] [INFO] Received message from BUY: {"token":{"mintAddress":"J5f9wWiNBFY4KEkSke9KkPdLgNPCk29RJ3kf8qVhpump"},"canBuy":[true,true,true,true],"comment":["✅ Token Market Cap is still above 50% of ATH. Token may be able to recover"],"data":{"marketCap":6940.746517232222}}
+[2025-03-07T14:51:09.456Z] [INFO] Received message from BUY: {"token":{"mintAddress":"CHDLGYvFeuM1AaxzNY9kQc3CcpAbGQrcrr87w1wupump"},"canBuy":[true,true,true],"comment":["✅ Token Market Cap is still above 50% of ATH. Token may be able to recover"],"data":{"marketCap":56490.35288864515}}
+[2025-03-07T14:51:09.457Z] [INFO] Received message from BUY: {"token":{"mintAddress":"EiQm6BfBQb3SSed1ZMZMugTKQSDLqUBiYBojVmQacEJg"},"canBuy":[true,true,true,true],"comment":["✅ Token Market Cap is still above 50% of ATH. Token may be able to recover"],"data":{"marketCap":6476.143852972776}}
+[2025-03-07T14:51:09.458Z] [INFO] Received message from BUY: {"token":{"mintAddress":"GEyDtVndfHrrWjqEN2d3AqbCrDVPJ3HkXfeE5Zajpump"},"canBuy":[true,true,true],"comment":["✅ Token Market Cap is still above 50% of ATH. Token may be able to recover"],"data":{"marketCap":24195.19175996209}}
+[2025-03-07T14:51:09.459Z] [INFO] Received message from BUY: {"token":{"mintAddress":"Gvaj65i6vkDzbYKx3S6D4JGJmNeFc4Wo9nNyqTNnpump"},"canBuy":[true,true,true],"comment":["✅ Token Market Cap is still above 50% of ATH. Token may be able to recover"],"data":{"marketCap":24309.127911974727}}
+[2025-03-07T14:51:09.460Z] [INFO] Received message from BUY: {"token":{"mintAddress":"LmhaxNEycSpvQqPbCCQxzvoBU7uqn9aiTPf99VBpump"},"canBuy":[true,true,true,true],"comment":["✅ Token Market Cap is still above 50% of ATH. Token may be able to recover"],"data":{"marketCap":6595.899048863739}}
+[2025-03-07T14:51:09.461Z] [INFO] Received message from BUY: {"token":{"mintAddress":"3oA9miGh3D2z4wXT8NC9SsCNYNH3xHCwLELBgPYqpump"},"canBuy":[true,true,true,true],"comment":["✅ Token Market Cap is still above 50% of ATH. Token may be able to recover"],"data":{"marketCap":6346.607348488307}}
+[2025-03-07T14:51:09.462Z] [INFO] Received message from BUY: {"token":{"mintAddress":"4c14TtErRzQJq98JpSKjBZEh12izddLNAnmAi2i4hhoT"},"canBuy":[true,true,true,true],"comment":["✅ Token Market Cap is still above 50% of ATH. Token may be able to recover"],"data":{"marketCap":6191.191972528698}}
+[2025-03-07T14:51:09.463Z] [INFO] Received message from BUY: {"token":{"mintAddress":"Gvaj65i6vkDzbYKx3S6D4JGJmNeFc4Wo9nNyqTNnpump"},"canBuy":[true,true,true,true],"comment":["✅ Token Market Cap is still above 50% of ATH. Token may be able to recover"],"data":{"marketCap":15389.078698982486}}
+[2025-03-07T14:51:09.464Z] [INFO] Received message from BUY: {"token":{"mintAddress":"5KcBA4vHEjjg8fx8Ct7fHsZHiWrskwRg4Bd7eCRtpump"},"canBuy":[true,true,true],"comment":["✅ Token Market Cap is still above 50% of ATH. Token may be able to recover"],"data":{"marketCap":24236.462796326472}}
+[2025-03-07T14:51:09.466Z] [INFO] Received message from BUY: {"token":{"mintAddress":"6APvYA1jMZnp3Yq1uwUJBbGFgXrvUFYkCvqT5vvJ6XuK"},"canBuy":[true,true,true],"comment":["✅ Token Market Cap is still above 50% of ATH. Token may be able to recover"],"data":{"marketCap":210009157.09724143}}
+[2025-03-07T14:51:09.467Z] [INFO] Received message from BUY: {"token":{"mintAddress":"3oA9miGh3D2z4wXT8NC9SsCNYNH3xHCwLELBgPYqpump"},"canBuy":[true,true,true,true],"comment":["✅ Token Market Cap is still above 50% of ATH. Token may be able to recover"],"data":{"marketCap":6194.014819727597}}
+[2025-03-07T14:51:09.469Z] [INFO] Received message from BUY: {"token":{"mintAddress":"HmDVM7czqydQpuy6punfqDGYjmZWufm6BaV1AyoMRNsi"},"canBuy":[true,true,true,true],"comment":["✅ Token Market Cap is still above 50% of ATH. Token may be able to recover"],"data":{"marketCap":6107.792831421354}}
+[2025-03-07T14:51:09.470Z] [INFO] Received message from BUY: {"token":{"mintAddress":"4c14TtErRzQJq98JpSKjBZEh12izddLNAnmAi2i4hhoT"},"canBuy":[true,true,true,true],"comment":["✅ Token Market Cap is still above 50% of ATH. Token may be able to recover"],"data":{"marketCap":6191.191972528698}}
+[2025-03-07T14:51:09.909Z] [INFO] Database synced successfully.
+[2025-03-07T14:53:00.016Z] [ERROR] (node:733) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+[2025-03-07T14:53:00.075Z] [INFO] Buying and selling service running on http://localhost:4100
+[2025-03-07T14:53:00.123Z] [INFO] Connected to RabbitMQ
+[2025-03-07T14:53:00.128Z] [INFO] Connected to RabbitMQ
+[2025-03-07T14:53:00.136Z] [INFO] Channel created for queue: "BUY"
+[2025-03-07T14:53:00.139Z] [INFO] Channel created for queue: "SELL"
+[2025-03-07T14:53:00.145Z] [INFO] Started consuming messages from "BUY"
+[2025-03-07T14:53:00.147Z] [INFO] Started consuming messages from "SELL"
+[2025-03-07T14:53:00.539Z] [INFO] Database synced successfully.
+[2025-03-07T14:53:19.230Z] [INFO] Received message from BUY: {"token":{"mintAddress":"4hX6YVDBixqQsTbNMWbYHGK9Z5N7Qu1AJBQCrMCkpump"},"canBuy":[true,true,true,true],"comment":["✅ Token Market Cap is still above 50% of ATH. Token may be able to recover"],"data":{"marketCap":15276.23112704351}}
+[2025-03-07T14:53:24.907Z] [INFO] data fetched from sol tracker
+[2025-03-07T14:53:24.908Z] [INFO] [object Object]
+[2025-03-07T14:53:24.909Z] [INFO] Price increase for 4hX6YVDBixqQsTbNMWbYHGK9Z5N7Qu1AJBQCrMCkpump -0.3585076387297562
+[2025-03-07T14:53:30.620Z] [INFO] data fetched from sol tracker
+[2025-03-07T14:53:30.622Z] [INFO] [object Object]
+[2025-03-07T14:53:30.624Z] [INFO] Price increase for 4hX6YVDBixqQsTbNMWbYHGK9Z5N7Qu1AJBQCrMCkpump 0.33237544510629613
+[2025-03-07T14:53:33.485Z] [INFO] Received message from BUY: {"token":{"mintAddress":"4hX6YVDBixqQsTbNMWbYHGK9Z5N7Qu1AJBQCrMCkpump"},"canBuy":[true,true,true,true],"comment":["✅ Token Market Cap is still above 50% of ATH. Token may be able to recover"],"data":{"marketCap":15244.930453546409}}
+[2025-03-07T14:53:36.597Z] [INFO] data fetched from sol tracker
+[2025-03-07T14:53:36.598Z] [INFO] [object Object]
+[2025-03-07T14:53:36.600Z] [INFO] Price increase for 4hX6YVDBixqQsTbNMWbYHGK9Z5N7Qu1AJBQCrMCkpump 3.7535680614153244
+[2025-03-07T14:53:42.762Z] [INFO] data fetched from sol tracker
+[2025-03-07T14:53:42.764Z] [INFO] [object Object]
+[2025-03-07T14:53:42.766Z] [INFO] Price increase for 4hX6YVDBixqQsTbNMWbYHGK9Z5N7Qu1AJBQCrMCkpump 11.449052248938052
+[2025-03-07T14:53:48.555Z] [INFO] data fetched from sol tracker
+[2025-03-07T14:53:48.557Z] [INFO] [object Object]
+[2025-03-07T14:53:48.559Z] [INFO] Price increase for 4hX6YVDBixqQsTbNMWbYHGK9Z5N7Qu1AJBQCrMCkpump 11.449052248938052
+[2025-03-07T14:53:49.111Z] [INFO] Received message from BUY: {"token":{"mintAddress":"4hX6YVDBixqQsTbNMWbYHGK9Z5N7Qu1AJBQCrMCkpump"},"canBuy":[true,true,true,true],"comment":["✅ Token Market Cap is still above 50% of ATH. Token may be able to recover"],"data":{"marketCap":16406.557883266396}}
+[2025-03-07T14:53:54.576Z] [INFO] data fetched from sol tracker
+[2025-03-07T14:53:54.578Z] [INFO] [object Object]
+[2025-03-07T14:53:54.580Z] [INFO] Price increase for 4hX6YVDBixqQsTbNMWbYHGK9Z5N7Qu1AJBQCrMCkpump 6.953224777566247
+[2025-03-07T14:54:00.608Z] [INFO] data fetched from sol tracker
+[2025-03-07T14:54:00.611Z] [INFO] [object Object]
+[2025-03-07T14:54:00.613Z] [INFO] Price increase for 4hX6YVDBixqQsTbNMWbYHGK9Z5N7Qu1AJBQCrMCkpump -8.521130756758506
+[2025-03-07T14:54:06.635Z] [INFO] data fetched from sol tracker
+[2025-03-07T14:54:06.636Z] [INFO] [object Object]
+[2025-03-07T14:54:06.638Z] [INFO] Price increase for 4hX6YVDBixqQsTbNMWbYHGK9Z5N7Qu1AJBQCrMCkpump -8.521130756758506
+[2025-03-07T14:54:12.563Z] [INFO] data fetched from sol tracker
+[2025-03-07T14:54:12.565Z] [INFO] [object Object]
+[2025-03-07T14:54:12.567Z] [INFO] Price increase for 4hX6YVDBixqQsTbNMWbYHGK9Z5N7Qu1AJBQCrMCkpump -5.332287478695064
+[2025-03-07T14:54:18.567Z] [INFO] data fetched from sol tracker
+[2025-03-07T14:54:18.569Z] [INFO] [object Object]
+[2025-03-07T14:54:18.571Z] [INFO] Price increase for 4hX6YVDBixqQsTbNMWbYHGK9Z5N7Qu1AJBQCrMCkpump -4.434923304481405
+[2025-03-07T14:54:24.620Z] [INFO] data fetched from sol tracker
+[2025-03-07T14:54:24.621Z] [INFO] [object Object]
+[2025-03-07T14:54:24.623Z] [INFO] Price increase for 4hX6YVDBixqQsTbNMWbYHGK9Z5N7Qu1AJBQCrMCkpump -4.434923304481405
+[2025-03-07T14:54:30.645Z] [INFO] data fetched from sol tracker
+[2025-03-07T14:54:30.647Z] [INFO] [object Object]
+[2025-03-07T14:54:30.648Z] [INFO] Price increase for 4hX6YVDBixqQsTbNMWbYHGK9Z5N7Qu1AJBQCrMCkpump -4.434923304481405
+[2025-03-07T14:54:36.547Z] [INFO] data fetched from sol tracker
+[2025-03-07T14:54:36.549Z] [INFO] [object Object]
+[2025-03-07T14:54:36.550Z] [INFO] Price increase for 4hX6YVDBixqQsTbNMWbYHGK9Z5N7Qu1AJBQCrMCkpump -4.43652669694619
+[2025-03-07T14:54:42.610Z] [INFO] data fetched from sol tracker
+[2025-03-07T14:54:42.611Z] [INFO] [object Object]
+[2025-03-07T14:54:42.613Z] [INFO] Price increase for 4hX6YVDBixqQsTbNMWbYHGK9Z5N7Qu1AJBQCrMCkpump -4.4027721254542636
+[2025-03-07T14:54:48.629Z] [INFO] data fetched from sol tracker
+[2025-03-07T14:54:48.631Z] [INFO] [object Object]
+[2025-03-07T14:54:48.633Z] [INFO] Price increase for 4hX6YVDBixqQsTbNMWbYHGK9Z5N7Qu1AJBQCrMCkpump -6.64408669932524
+[2025-03-07T14:54:54.533Z] [INFO] data fetched from sol tracker
+[2025-03-07T14:54:54.534Z] [INFO] [object Object]
+[2025-03-07T14:54:54.535Z] [INFO] Price increase for 4hX6YVDBixqQsTbNMWbYHGK9Z5N7Qu1AJBQCrMCkpump -6.741744109050826
+[2025-03-07T14:55:00.538Z] [INFO] data fetched from sol tracker
+[2025-03-07T14:55:00.540Z] [INFO] [object Object]
+[2025-03-07T14:55:00.543Z] [INFO] Price increase for 4hX6YVDBixqQsTbNMWbYHGK9Z5N7Qu1AJBQCrMCkpump -15.436876906248834
+[2025-03-07T14:55:06.577Z] [INFO] data fetched from sol tracker
+[2025-03-07T14:55:06.579Z] [INFO] [object Object]
+[2025-03-07T14:55:06.582Z] [INFO] Price increase for 4hX6YVDBixqQsTbNMWbYHGK9Z5N7Qu1AJBQCrMCkpump -21.54210225884004
+[2025-03-07T14:57:25.805Z] [ERROR] (node:1048) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+[2025-03-07T14:57:25.848Z] [INFO] Buying and selling service running on http://localhost:4100
+[2025-03-07T14:57:25.892Z] [INFO] Connected to RabbitMQ
+[2025-03-07T14:57:25.896Z] [INFO] Connected to RabbitMQ
+[2025-03-07T14:57:25.908Z] [INFO] Channel created for queue: "BUY"
+[2025-03-07T14:57:25.911Z] [INFO] Channel created for queue: "SELL"
+[2025-03-07T14:57:25.916Z] [INFO] Started consuming messages from "BUY"
+[2025-03-07T14:57:25.918Z] [INFO] Started consuming messages from "SELL"
+[2025-03-07T14:57:26.297Z] [INFO] Database synced successfully.
+[2025-03-07T14:57:29.220Z] [INFO] Received message from BUY: {"token":{"mintAddress":"TaS3QxgKrxB77nmFiYabm2RZnVb3fRU85iFpJfEpump"},"canBuy":[true,true,true,true],"comment":["✅ Token Market Cap is still above 50% of ATH. Token may be able to recover"],"data":{"marketCap":17627.902533631695}}
+[2025-03-07T14:57:32.698Z] [INFO] data fetched from sol tracker
+[2025-03-07T14:57:32.698Z] [INFO] [object Object]
+[2025-03-07T14:57:32.700Z] [INFO] Price increase for 4hX6YVDBixqQsTbNMWbYHGK9Z5N7Qu1AJBQCrMCkpump -18.82304315977056
+[2025-03-07T14:57:32.702Z] [INFO] Price increase for TaS3QxgKrxB77nmFiYabm2RZnVb3fRU85iFpJfEpump 0.19623756483223093
+[2025-03-07T14:57:38.671Z] [INFO] data fetched from sol tracker
+[2025-03-07T14:57:38.672Z] [INFO] [object Object]
+[2025-03-07T14:57:38.674Z] [INFO] Price increase for 4hX6YVDBixqQsTbNMWbYHGK9Z5N7Qu1AJBQCrMCkpump -18.82304315977056
+[2025-03-07T14:57:38.675Z] [INFO] Price increase for TaS3QxgKrxB77nmFiYabm2RZnVb3fRU85iFpJfEpump -1.8522270031508976
+[2025-03-07T14:57:44.464Z] [INFO] data fetched from sol tracker
+[2025-03-07T14:57:44.465Z] [INFO] [object Object]
+[2025-03-07T14:57:44.465Z] [INFO] Price increase for 4hX6YVDBixqQsTbNMWbYHGK9Z5N7Qu1AJBQCrMCkpump -18.82304315977056
+[2025-03-07T14:57:44.466Z] [INFO] Price increase for TaS3QxgKrxB77nmFiYabm2RZnVb3fRU85iFpJfEpump -11.917838899842565
+[2025-03-07T14:57:47.988Z] [INFO] Received message from BUY: {"token":{"mintAddress":"TaS3QxgKrxB77nmFiYabm2RZnVb3fRU85iFpJfEpump"},"canBuy":[true,true,true,true],"comment":["✅ Token Market Cap is still above 50% of ATH. Token may be able to recover"],"data":{"marketCap":15368.512874067155}}
+[2025-03-07T14:57:50.984Z] [INFO] data fetched from sol tracker
+[2025-03-07T14:57:50.985Z] [INFO] [object Object]
+[2025-03-07T14:57:50.986Z] [INFO] Price increase for 4hX6YVDBixqQsTbNMWbYHGK9Z5N7Qu1AJBQCrMCkpump -18.82304315977056
+[2025-03-07T14:57:50.988Z] [INFO] Price increase for TaS3QxgKrxB77nmFiYabm2RZnVb3fRU85iFpJfEpump 11.139369559490296
+[2025-03-07T14:58:27.816Z] [ERROR] (node:1115) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+[2025-03-07T14:58:27.858Z] [INFO] Buying and selling service running on http://localhost:4100
+[2025-03-07T14:58:27.890Z] [INFO] Connected to RabbitMQ
+[2025-03-07T14:58:27.893Z] [INFO] Connected to RabbitMQ
+[2025-03-07T14:58:27.906Z] [INFO] Channel created for queue: "SELL"
+[2025-03-07T14:58:27.918Z] [INFO] Channel created for queue: "BUY"
+[2025-03-07T14:58:27.925Z] [INFO] Started consuming messages from "SELL"
+[2025-03-07T14:58:27.926Z] [INFO] Started consuming messages from "BUY"
+[2025-03-07T14:58:28.305Z] [INFO] Database synced successfully.
+[2025-03-07T14:58:40.743Z] [INFO] data fetched from sol tracker
+[2025-03-07T14:58:40.745Z] [INFO] [object Object]
+[2025-03-07T14:58:40.746Z] [INFO] Price increase for 4hX6YVDBixqQsTbNMWbYHGK9Z5N7Qu1AJBQCrMCkpump -23.51140340202185
+[2025-03-07T14:58:40.748Z] [INFO] ✅ Sent TaS3QxgKrxB77nmFiYabm2RZnVb3fRU85iFpJfEpump to SELL queue. Up 101.98%
+[2025-03-07T14:58:40.750Z] [INFO] Price increase for TaS3QxgKrxB77nmFiYabm2RZnVb3fRU85iFpJfEpump 101.98481745002013
+[2025-03-07T14:58:40.753Z] [INFO] Message sent to "SELL": {"tokenMint":"TaS3QxgKrxB77nmFiYabm2RZnVb3fRU85iFpJfEpump","marketCap":35605.6816352721,"priceIncrease":101.98481745002013}
+[2025-03-07T14:58:40.762Z] [INFO] Received message from SELL: {"tokenMint":"TaS3QxgKrxB77nmFiYabm2RZnVb3fRU85iFpJfEpump","marketCap":35605.6816352721,"priceIncrease":101.98481745002013}
+[2025-03-07T14:58:40.957Z] [ERROR] Error fetching market cap data: AxiosError: Request failed with status code 429
+[2025-03-07T14:58:42.295Z] [ERROR] Error selling meme token: TaS3QxgKrxB77nmFiYabm2RZnVb3fRU85iFpJfEpump Error: Failed to get swap route
+[2025-03-07T14:58:46.015Z] [INFO] data fetched from sol tracker
+[2025-03-07T14:58:46.015Z] [INFO] [object Object]
+[2025-03-07T14:58:46.016Z] [INFO] Price increase for 4hX6YVDBixqQsTbNMWbYHGK9Z5N7Qu1AJBQCrMCkpump -23.51140340202185
+[2025-03-07T14:58:52.543Z] [INFO] data fetched from sol tracker
+[2025-03-07T14:58:52.545Z] [INFO] [object Object]
+[2025-03-07T14:58:52.546Z] [INFO] 💔 Sent 4hX6YVDBixqQsTbNMWbYHGK9Z5N7Qu1AJBQCrMCkpump to SELL queue. Down -30.20%
+[2025-03-07T14:58:52.548Z] [INFO] Price increase for 4hX6YVDBixqQsTbNMWbYHGK9Z5N7Qu1AJBQCrMCkpump -30.199154458711458
+[2025-03-07T14:58:52.550Z] [INFO] Message sent to "SELL": {"tokenMint":"4hX6YVDBixqQsTbNMWbYHGK9Z5N7Qu1AJBQCrMCkpump","marketCap":10662.91676657832,"priceIncrease":-30.199154458711458}
+[2025-03-07T14:58:52.554Z] [INFO] Received message from SELL: {"tokenMint":"4hX6YVDBixqQsTbNMWbYHGK9Z5N7Qu1AJBQCrMCkpump","marketCap":10662.91676657832,"priceIncrease":-30.199154458711458}
+[2025-03-07T14:58:53.901Z] [ERROR] Error selling meme token: 4hX6YVDBixqQsTbNMWbYHGK9Z5N7Qu1AJBQCrMCkpump Error: Failed to get swap route
+[2025-03-07T15:04:05.404Z] [ERROR] (node:1321) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+[2025-03-07T15:04:05.447Z] [INFO] Buying and selling service running on http://localhost:4100
+[2025-03-07T15:04:05.489Z] [INFO] Connected to RabbitMQ
+[2025-03-07T15:04:05.493Z] [INFO] Connected to RabbitMQ
+[2025-03-07T15:04:05.503Z] [INFO] Channel created for queue: "BUY"
+[2025-03-07T15:04:05.506Z] [INFO] Channel created for queue: "SELL"
+[2025-03-07T15:04:05.513Z] [INFO] Started consuming messages from "BUY"
+[2025-03-07T15:04:05.515Z] [INFO] Started consuming messages from "SELL"
+[2025-03-07T15:04:05.917Z] [INFO] Database synced successfully.
+[2025-03-07T15:04:20.721Z] [INFO] Received message from BUY: {"token":{"mintAddress":"Et8WBqoP9MbeGr66YQG9cjYUxLs7iYHPkoCjC9arpump"},"canBuy":[true,true,true,true],"comment":["✅ Token Market Cap is still above 50% of ATH. Token may be able to recover"],"data":{"marketCap":16491.47578109741}}
+[2025-03-07T15:04:21.044Z] [INFO] Received message from BUY: {"token":{"mintAddress":"G6e1P4NioNUwBX4nAdToB3rcN7BXYM7ZWn7GQp43pump"},"canBuy":[true,true,true,true],"comment":["✅ Token Market Cap is still above 50% of ATH. Token may be able to recover"],"data":{"marketCap":21644.382667488175}}
+[2025-03-07T15:04:26.176Z] [INFO] data fetched from sol tracker
+[2025-03-07T15:04:26.176Z] [INFO] [object Object]
+[2025-03-07T15:04:26.178Z] [INFO] Price increase for Et8WBqoP9MbeGr66YQG9cjYUxLs7iYHPkoCjC9arpump 4.972378828740926
+[2025-03-07T15:04:26.179Z] [INFO] Price increase for G6e1P4NioNUwBX4nAdToB3rcN7BXYM7ZWn7GQp43pump -0.5611592020686894
+[2025-03-07T15:04:29.725Z] [INFO] data fetched from sol tracker
+[2025-03-07T15:04:29.725Z] [INFO] [object Object]
+[2025-03-07T15:04:29.726Z] [INFO] Price increase for Et8WBqoP9MbeGr66YQG9cjYUxLs7iYHPkoCjC9arpump -7.223161879509905
+[2025-03-07T15:04:29.726Z] [INFO] Price increase for G6e1P4NioNUwBX4nAdToB3rcN7BXYM7ZWn7GQp43pump -0.16314326124628192
+[2025-03-07T15:04:34.233Z] [INFO] Received message from BUY: {"token":{"mintAddress":"G6e1P4NioNUwBX4nAdToB3rcN7BXYM7ZWn7GQp43pump"},"canBuy":[true,true,true,true],"comment":["✅ Token Market Cap is still above 50% of ATH. Token may be able to recover"],"data":{"marketCap":21644.382667488175}}
+[2025-03-07T15:04:36.216Z] [INFO] data fetched from sol tracker
+[2025-03-07T15:04:36.216Z] [INFO] [object Object]
+[2025-03-07T15:04:36.218Z] [INFO] Price increase for Et8WBqoP9MbeGr66YQG9cjYUxLs7iYHPkoCjC9arpump -24.495193558461075
+[2025-03-07T15:04:36.219Z] [INFO] Price increase for G6e1P4NioNUwBX4nAdToB3rcN7BXYM7ZWn7GQp43pump -0.5611592020686894
+[2025-03-07T15:04:41.952Z] [INFO] data fetched from sol tracker
+[2025-03-07T15:04:41.953Z] [INFO] [object Object]
+[2025-03-07T15:04:41.955Z] [INFO] Price increase for Et8WBqoP9MbeGr66YQG9cjYUxLs7iYHPkoCjC9arpump -4.10898602097141
+[2025-03-07T15:04:41.957Z] [INFO] Price increase for G6e1P4NioNUwBX4nAdToB3rcN7BXYM7ZWn7GQp43pump -0.5611592020686894
+[2025-03-07T15:04:48.084Z] [INFO] data fetched from sol tracker
+[2025-03-07T15:04:48.085Z] [INFO] [object Object]
+[2025-03-07T15:04:48.087Z] [INFO] Price increase for Et8WBqoP9MbeGr66YQG9cjYUxLs7iYHPkoCjC9arpump -15.317611699786909
+[2025-03-07T15:04:48.090Z] [INFO] Price increase for G6e1P4NioNUwBX4nAdToB3rcN7BXYM7ZWn7GQp43pump 0.8914117105094942
+[2025-03-07T15:04:51.451Z] [INFO] Received message from BUY: {"token":{"mintAddress":"G6e1P4NioNUwBX4nAdToB3rcN7BXYM7ZWn7GQp43pump"},"canBuy":[true,true,true,true],"comment":["✅ Token Market Cap is still above 50% of ATH. Token may be able to recover"],"data":{"marketCap":21805.068135686484}}
+[2025-03-07T15:04:53.994Z] [INFO] data fetched from sol tracker
+[2025-03-07T15:04:53.994Z] [INFO] [object Object]
+[2025-03-07T15:04:53.995Z] [INFO] 💔 Sent Et8WBqoP9MbeGr66YQG9cjYUxLs7iYHPkoCjC9arpump to SELL queue. Down -44.05%
+[2025-03-07T15:04:53.995Z] [INFO] Price increase for Et8WBqoP9MbeGr66YQG9cjYUxLs7iYHPkoCjC9arpump -44.04812313657832
+[2025-03-07T15:04:53.996Z] [INFO] Price increase for G6e1P4NioNUwBX4nAdToB3rcN7BXYM7ZWn7GQp43pump 0.8914117105094942
+[2025-03-07T15:04:53.998Z] [INFO] Message sent to "SELL": {"tokenMint":"Et8WBqoP9MbeGr66YQG9cjYUxLs7iYHPkoCjC9arpump","marketCap":9227.303772931187,"priceIncrease":-44.04812313657832}
+[2025-03-07T15:04:54.003Z] [INFO] Received message from SELL: {"tokenMint":"Et8WBqoP9MbeGr66YQG9cjYUxLs7iYHPkoCjC9arpump","marketCap":9227.303772931187,"priceIncrease":-44.04812313657832}
+[2025-03-07T15:04:55.850Z] [ERROR] Error selling meme token: Et8WBqoP9MbeGr66YQG9cjYUxLs7iYHPkoCjC9arpump Error: Failed to get swap route
+[2025-03-07T15:05:00.887Z] [INFO] data fetched from sol tracker
+[2025-03-07T15:05:00.888Z] [INFO] [object Object]
+[2025-03-07T15:05:00.888Z] [INFO] Price increase for G6e1P4NioNUwBX4nAdToB3rcN7BXYM7ZWn7GQp43pump 0.8914117105094942
+[2025-03-07T15:05:05.676Z] [INFO] data fetched from sol tracker
+[2025-03-07T15:05:05.677Z] [INFO] [object Object]
+[2025-03-07T15:05:05.677Z] [INFO] Price increase for G6e1P4NioNUwBX4nAdToB3rcN7BXYM7ZWn7GQp43pump 0.8914117105094942
+[2025-03-07T15:05:11.981Z] [INFO] data fetched from sol tracker
+[2025-03-07T15:05:11.981Z] [INFO] [object Object]
+[2025-03-07T15:05:11.982Z] [INFO] Price increase for G6e1P4NioNUwBX4nAdToB3rcN7BXYM7ZWn7GQp43pump 0.8914117105094942
+[2025-03-07T15:05:14.435Z] [INFO] Received message from BUY: {"token":{"mintAddress":"G6e1P4NioNUwBX4nAdToB3rcN7BXYM7ZWn7GQp43pump"},"canBuy":[true,true,true,true],"comment":["✅ Token Market Cap is still above 50% of ATH. Token may be able to recover"],"data":{"marketCap":21713.85385463581}}
+[2025-03-07T15:05:21.446Z] [INFO] data fetched from sol tracker
+[2025-03-07T15:05:21.447Z] [INFO] [object Object]
+[2025-03-07T15:05:21.449Z] [INFO] Price increase for G6e1P4NioNUwBX4nAdToB3rcN7BXYM7ZWn7GQp43pump 0.8914117105094942
+[2025-03-07T15:05:23.677Z] [INFO] data fetched from sol tracker
+[2025-03-07T15:05:23.677Z] [INFO] [object Object]
+[2025-03-07T15:05:23.678Z] [INFO] Price increase for G6e1P4NioNUwBX4nAdToB3rcN7BXYM7ZWn7GQp43pump 0.8914117105094942
+[2025-03-07T15:05:30.010Z] [INFO] data fetched from sol tracker
+[2025-03-07T15:05:30.011Z] [INFO] [object Object]
+[2025-03-07T15:05:30.012Z] [INFO] Price increase for G6e1P4NioNUwBX4nAdToB3rcN7BXYM7ZWn7GQp43pump 0.8914117105094942
+[2025-03-07T15:05:31.155Z] [INFO] Received message from BUY: {"token":{"mintAddress":"G6e1P4NioNUwBX4nAdToB3rcN7BXYM7ZWn7GQp43pump"},"canBuy":[true,true,true,true],"comment":["✅ Token Market Cap is still above 50% of ATH. Token may be able to recover"],"data":{"marketCap":21713.85385463581}}
+[2025-03-07T15:05:36.154Z] [INFO] data fetched from sol tracker
+[2025-03-07T15:05:36.155Z] [INFO] [object Object]
+[2025-03-07T15:05:36.156Z] [INFO] Price increase for G6e1P4NioNUwBX4nAdToB3rcN7BXYM7ZWn7GQp43pump 0.8914117105094942
+[2025-03-07T15:05:42.173Z] [INFO] data fetched from sol tracker
+[2025-03-07T15:05:42.175Z] [INFO] [object Object]
+[2025-03-07T15:05:42.177Z] [INFO] Price increase for G6e1P4NioNUwBX4nAdToB3rcN7BXYM7ZWn7GQp43pump 0.8914117105094942
+[2025-03-07T15:05:48.274Z] [INFO] data fetched from sol tracker
+[2025-03-07T15:05:48.276Z] [INFO] [object Object]
+[2025-03-07T15:05:48.277Z] [INFO] Price increase for G6e1P4NioNUwBX4nAdToB3rcN7BXYM7ZWn7GQp43pump 1.0286660892851558
+[2025-03-07T15:05:54.254Z] [INFO] data fetched from sol tracker
+[2025-03-07T15:05:54.256Z] [INFO] [object Object]
+[2025-03-07T15:05:54.257Z] [INFO] Price increase for G6e1P4NioNUwBX4nAdToB3rcN7BXYM7ZWn7GQp43pump 0.8914117105094942
+[2025-03-07T15:05:57.188Z] [ERROR] Error sending log to Telegram: Error: connect ETIMEDOUT 149.154.167.220:443
+[2025-03-07T15:06:00.352Z] [INFO] data fetched from sol tracker
+[2025-03-07T15:06:00.353Z] [INFO] [object Object]
+[2025-03-07T15:06:00.354Z] [INFO] Price increase for G6e1P4NioNUwBX4nAdToB3rcN7BXYM7ZWn7GQp43pump 0.8914117105094942
+[2025-03-07T15:06:06.246Z] [INFO] data fetched from sol tracker
+[2025-03-07T15:06:06.248Z] [INFO] [object Object]
+[2025-03-07T15:06:06.250Z] [INFO] Price increase for G6e1P4NioNUwBX4nAdToB3rcN7BXYM7ZWn7GQp43pump 0.8914117105094942
+[2025-03-07T15:06:12.220Z] [INFO] data fetched from sol tracker
+[2025-03-07T15:06:12.222Z] [INFO] [object Object]
+[2025-03-07T15:06:12.224Z] [INFO] Price increase for G6e1P4NioNUwBX4nAdToB3rcN7BXYM7ZWn7GQp43pump 0.8914117105094942
+[2025-03-07T15:06:18.229Z] [INFO] data fetched from sol tracker
+[2025-03-07T15:06:18.231Z] [INFO] [object Object]
+[2025-03-07T15:06:18.233Z] [INFO] Price increase for G6e1P4NioNUwBX4nAdToB3rcN7BXYM7ZWn7GQp43pump 0.8914117105094942
+[2025-03-07T15:06:24.256Z] [INFO] data fetched from sol tracker
+[2025-03-07T15:06:24.258Z] [INFO] [object Object]
+[2025-03-07T15:06:24.261Z] [INFO] Price increase for G6e1P4NioNUwBX4nAdToB3rcN7BXYM7ZWn7GQp43pump 0.8914117105094942
+[2025-03-07T15:06:34.068Z] [INFO] data fetched from sol tracker
+[2025-03-07T15:06:34.070Z] [INFO] [object Object]
+[2025-03-07T15:06:34.072Z] [INFO] Price increase for G6e1P4NioNUwBX4nAdToB3rcN7BXYM7ZWn7GQp43pump 0.8914117105094942
+[2025-03-07T15:06:36.025Z] [INFO] data fetched from sol tracker
+[2025-03-07T15:06:36.025Z] [INFO] [object Object]
+[2025-03-07T15:06:36.026Z] [INFO] Price increase for G6e1P4NioNUwBX4nAdToB3rcN7BXYM7ZWn7GQp43pump 0.8914117105094942
+[2025-03-07T15:06:36.679Z] [ERROR] Error sending log to Telegram: Error: connect ETIMEDOUT 149.154.167.220:443
+[2025-03-07T15:06:42.178Z] [INFO] data fetched from sol tracker
+[2025-03-07T15:06:42.179Z] [INFO] [object Object]
+[2025-03-07T15:06:42.180Z] [INFO] Price increase for G6e1P4NioNUwBX4nAdToB3rcN7BXYM7ZWn7GQp43pump 0.8914117105094942
+[2025-03-07T15:06:48.218Z] [INFO] data fetched from sol tracker
+[2025-03-07T15:06:48.220Z] [INFO] [object Object]
+[2025-03-07T15:06:48.222Z] [INFO] Price increase for G6e1P4NioNUwBX4nAdToB3rcN7BXYM7ZWn7GQp43pump 0.8914117105094942
+[2025-03-07T15:06:54.221Z] [INFO] data fetched from sol tracker
+[2025-03-07T15:06:54.223Z] [INFO] [object Object]
+[2025-03-07T15:06:54.225Z] [INFO] Price increase for G6e1P4NioNUwBX4nAdToB3rcN7BXYM7ZWn7GQp43pump 0.8914117105094942
+[2025-03-07T15:07:00.271Z] [INFO] data fetched from sol tracker
+[2025-03-07T15:07:00.273Z] [INFO] [object Object]
+[2025-03-07T15:07:00.276Z] [INFO] Price increase for G6e1P4NioNUwBX4nAdToB3rcN7BXYM7ZWn7GQp43pump 0.8914117105094942
+[2025-03-07T15:07:06.244Z] [INFO] data fetched from sol tracker
+[2025-03-07T15:07:06.246Z] [INFO] [object Object]
+[2025-03-07T15:07:06.247Z] [INFO] Price increase for G6e1P4NioNUwBX4nAdToB3rcN7BXYM7ZWn7GQp43pump 1.0621773379298356
+[2025-03-07T15:07:12.290Z] [INFO] data fetched from sol tracker
+[2025-03-07T15:07:12.292Z] [INFO] [object Object]
+[2025-03-07T15:07:12.293Z] [INFO] Price increase for G6e1P4NioNUwBX4nAdToB3rcN7BXYM7ZWn7GQp43pump 1.0621773379298356
+[2025-03-07T15:07:18.227Z] [INFO] data fetched from sol tracker
+[2025-03-07T15:07:18.229Z] [INFO] [object Object]
+[2025-03-07T15:07:18.231Z] [INFO] Price increase for G6e1P4NioNUwBX4nAdToB3rcN7BXYM7ZWn7GQp43pump 0.8914117105094942
+[2025-03-07T15:07:24.258Z] [INFO] data fetched from sol tracker
+[2025-03-07T15:07:24.272Z] [INFO] [object Object]
+[2025-03-07T15:07:24.275Z] [INFO] Price increase for G6e1P4NioNUwBX4nAdToB3rcN7BXYM7ZWn7GQp43pump 0.8914117105094942
+[2025-03-07T15:07:30.150Z] [INFO] data fetched from sol tracker
+[2025-03-07T15:07:30.152Z] [INFO] [object Object]
+[2025-03-07T15:07:30.154Z] [INFO] Price increase for G6e1P4NioNUwBX4nAdToB3rcN7BXYM7ZWn7GQp43pump 0.8914117105094942
+[2025-03-07T15:07:36.183Z] [INFO] data fetched from sol tracker
+[2025-03-07T15:07:36.184Z] [INFO] [object Object]
+[2025-03-07T15:07:36.186Z] [INFO] Price increase for G6e1P4NioNUwBX4nAdToB3rcN7BXYM7ZWn7GQp43pump 0.8914117105094942
+[2025-03-07T15:07:42.649Z] [INFO] data fetched from sol tracker
+[2025-03-07T15:07:42.651Z] [INFO] [object Object]
+[2025-03-07T15:07:42.653Z] [INFO] Price increase for G6e1P4NioNUwBX4nAdToB3rcN7BXYM7ZWn7GQp43pump 0.8914117105094942
+[2025-03-07T15:07:47.957Z] [INFO] data fetched from sol tracker
+[2025-03-07T15:07:47.957Z] [INFO] [object Object]
+[2025-03-07T15:07:47.957Z] [INFO] Price increase for G6e1P4NioNUwBX4nAdToB3rcN7BXYM7ZWn7GQp43pump 0.8914117105094942
+[2025-03-07T15:07:54.284Z] [INFO] data fetched from sol tracker
+[2025-03-07T15:07:54.286Z] [INFO] [object Object]
+[2025-03-07T15:07:54.288Z] [INFO] Price increase for G6e1P4NioNUwBX4nAdToB3rcN7BXYM7ZWn7GQp43pump 0.8914117105094942
+[2025-03-07T15:08:00.310Z] [INFO] data fetched from sol tracker
+[2025-03-07T15:08:00.313Z] [INFO] [object Object]
+[2025-03-07T15:08:00.315Z] [INFO] Price increase for G6e1P4NioNUwBX4nAdToB3rcN7BXYM7ZWn7GQp43pump 0.8914117105094942
+[2025-03-07T15:08:06.228Z] [INFO] data fetched from sol tracker
+[2025-03-07T15:08:06.229Z] [INFO] [object Object]
+[2025-03-07T15:08:06.231Z] [INFO] Price increase for G6e1P4NioNUwBX4nAdToB3rcN7BXYM7ZWn7GQp43pump 0.8914117105094942
+[2025-03-07T15:08:12.191Z] [INFO] data fetched from sol tracker
+[2025-03-07T15:08:12.194Z] [INFO] [object Object]
+[2025-03-07T15:08:12.195Z] [INFO] Price increase for G6e1P4NioNUwBX4nAdToB3rcN7BXYM7ZWn7GQp43pump 1.058369642263422
+[2025-03-07T15:08:18.352Z] [INFO] data fetched from sol tracker
+[2025-03-07T15:08:18.354Z] [INFO] [object Object]
+[2025-03-07T15:08:18.355Z] [INFO] Price increase for G6e1P4NioNUwBX4nAdToB3rcN7BXYM7ZWn7GQp43pump 0.8914117105094942
+[2025-03-07T15:08:24.865Z] [INFO] data fetched from sol tracker
+[2025-03-07T15:08:24.867Z] [INFO] [object Object]
+[2025-03-07T15:08:24.869Z] [INFO] Price increase for G6e1P4NioNUwBX4nAdToB3rcN7BXYM7ZWn7GQp43pump 0.8914117105094942
+[2025-03-07T15:08:29.886Z] [INFO] data fetched from sol tracker
+[2025-03-07T15:08:29.886Z] [INFO] [object Object]
+[2025-03-07T15:08:29.887Z] [INFO] Price increase for G6e1P4NioNUwBX4nAdToB3rcN7BXYM7ZWn7GQp43pump 0.8914117105094942
+[2025-03-07T15:08:36.307Z] [INFO] data fetched from sol tracker
+[2025-03-07T15:08:36.309Z] [INFO] [object Object]
+[2025-03-07T15:08:36.310Z] [INFO] Price increase for G6e1P4NioNUwBX4nAdToB3rcN7BXYM7ZWn7GQp43pump 0.8914117105094942
+[2025-03-07T15:08:37.607Z] [INFO] Received message from BUY: {"token":{"mintAddress":"FekNJZ24mSqrScwTnzk5KaoF2gBmT1xKo3K8uaoJpump"},"canBuy":[true,true,true,true],"comment":["✅ Token Market Cap is still above 50% of ATH. Token may be able to recover"],"data":{"marketCap":20601.271565865663}}
+[2025-03-07T15:08:39.327Z] [ERROR] Error sending log to Telegram: Error: connect ETIMEDOUT 149.154.167.220:443
+[2025-03-07T15:08:39.328Z] [ERROR] Error sending log to Telegram: Error: connect ETIMEDOUT 149.154.167.220:443
+[2025-03-07T15:08:42.314Z] [INFO] data fetched from sol tracker
+[2025-03-07T15:08:42.315Z] [INFO] [object Object]
+[2025-03-07T15:08:42.315Z] [INFO] Price increase for G6e1P4NioNUwBX4nAdToB3rcN7BXYM7ZWn7GQp43pump 0.8914117105094942
+[2025-03-07T15:08:42.316Z] [INFO] Price increase for FekNJZ24mSqrScwTnzk5KaoF2gBmT1xKo3K8uaoJpump 4.925160672233541
+[2025-03-07T15:08:48.173Z] [INFO] data fetched from sol tracker
+[2025-03-07T15:08:48.175Z] [INFO] [object Object]
+[2025-03-07T15:08:48.176Z] [INFO] Price increase for G6e1P4NioNUwBX4nAdToB3rcN7BXYM7ZWn7GQp43pump 0.8914117105094942
+[2025-03-07T15:08:48.178Z] [INFO] Price increase for FekNJZ24mSqrScwTnzk5KaoF2gBmT1xKo3K8uaoJpump 0.45400311221887485
+[2025-03-07T15:08:52.043Z] [INFO] Received message from BUY: {"token":{"mintAddress":"FekNJZ24mSqrScwTnzk5KaoF2gBmT1xKo3K8uaoJpump"},"canBuy":[true,true,true,true],"comment":["✅ Token Market Cap is still above 50% of ATH. Token may be able to recover"],"data":{"marketCap":21173.432357868558}}
+[2025-03-07T15:08:54.247Z] [INFO] data fetched from sol tracker
+[2025-03-07T15:08:54.247Z] [INFO] [object Object]
+[2025-03-07T15:08:54.249Z] [INFO] Price increase for G6e1P4NioNUwBX4nAdToB3rcN7BXYM7ZWn7GQp43pump 0.8914117105094942
+[2025-03-07T15:08:54.251Z] [INFO] Price increase for FekNJZ24mSqrScwTnzk5KaoF2gBmT1xKo3K8uaoJpump -15.487529500296413
+[2025-03-07T15:09:00.252Z] [INFO] data fetched from sol tracker
+[2025-03-07T15:09:00.254Z] [INFO] [object Object]
+[2025-03-07T15:09:00.256Z] [INFO] Price increase for G6e1P4NioNUwBX4nAdToB3rcN7BXYM7ZWn7GQp43pump 0.8914117105094942
+[2025-03-07T15:09:00.258Z] [INFO] Price increase for FekNJZ24mSqrScwTnzk5KaoF2gBmT1xKo3K8uaoJpump -12.971384493938261
+[2025-03-07T15:09:06.262Z] [INFO] data fetched from sol tracker
+[2025-03-07T15:09:06.264Z] [INFO] [object Object]
+[2025-03-07T15:09:06.266Z] [INFO] Price increase for G6e1P4NioNUwBX4nAdToB3rcN7BXYM7ZWn7GQp43pump 0.9199931164101899
+[2025-03-07T15:09:06.267Z] [INFO] Price increase for FekNJZ24mSqrScwTnzk5KaoF2gBmT1xKo3K8uaoJpump -10.800020021519122
+[2025-03-07T15:09:07.994Z] [INFO] Received message from BUY: {"token":{"mintAddress":"FekNJZ24mSqrScwTnzk5KaoF2gBmT1xKo3K8uaoJpump"},"canBuy":[true,true,true,true],"comment":["✅ Token Market Cap is still above 50% of ATH. Token may be able to recover"],"data":{"marketCap":16086.973765602184}}
+[2025-03-07T15:09:12.532Z] [INFO] data fetched from sol tracker
+[2025-03-07T15:09:12.532Z] [INFO] [object Object]
+[2025-03-07T15:09:12.534Z] [INFO] Price increase for G6e1P4NioNUwBX4nAdToB3rcN7BXYM7ZWn7GQp43pump 0.8914117119673146
+[2025-03-07T15:09:12.536Z] [INFO] Price increase for FekNJZ24mSqrScwTnzk5KaoF2gBmT1xKo3K8uaoJpump 0.8886147513282758
+[2025-03-07T15:09:18.185Z] [INFO] data fetched from sol tracker
+[2025-03-07T15:09:18.185Z] [INFO] [object Object]
+[2025-03-07T15:09:18.187Z] [INFO] Price increase for G6e1P4NioNUwBX4nAdToB3rcN7BXYM7ZWn7GQp43pump 0.8914117119673146
+[2025-03-07T15:09:18.188Z] [INFO] Price increase for FekNJZ24mSqrScwTnzk5KaoF2gBmT1xKo3K8uaoJpump 7.8618310854250195
+[2025-03-07T15:09:24.209Z] [INFO] data fetched from sol tracker
+[2025-03-07T15:09:24.211Z] [INFO] [object Object]
+[2025-03-07T15:09:24.213Z] [INFO] 💔 Sent G6e1P4NioNUwBX4nAdToB3rcN7BXYM7ZWn7GQp43pump to SELL queue. No trades. Price still at 0.89% after 5 minutes
+[2025-03-07T15:09:24.215Z] [INFO] Price increase for G6e1P4NioNUwBX4nAdToB3rcN7BXYM7ZWn7GQp43pump 0.8914117119673146
+[2025-03-07T15:09:24.217Z] [INFO] Price increase for FekNJZ24mSqrScwTnzk5KaoF2gBmT1xKo3K8uaoJpump 4.491737048513938
+[2025-03-07T15:09:24.218Z] [INFO] Message sent to "SELL": {"tokenMint":"G6e1P4NioNUwBX4nAdToB3rcN7BXYM7ZWn7GQp43pump","marketCap":21837.340716585055,"priceIncrease":0.8914117119673146}
+[2025-03-07T15:09:24.222Z] [INFO] Received message from SELL: {"tokenMint":"G6e1P4NioNUwBX4nAdToB3rcN7BXYM7ZWn7GQp43pump","marketCap":21837.340716585055,"priceIncrease":0.8914117119673146}
+[2025-03-07T15:09:26.253Z] [ERROR] Error selling meme token: G6e1P4NioNUwBX4nAdToB3rcN7BXYM7ZWn7GQp43pump Error: Failed to get swap route
+[2025-03-07T15:09:28.437Z] [INFO] Received message from BUY: {"token":{"mintAddress":"FekNJZ24mSqrScwTnzk5KaoF2gBmT1xKo3K8uaoJpump"},"canBuy":[true,true,true,true],"comment":["✅ Token Market Cap is still above 50% of ATH. Token may be able to recover"],"data":{"marketCap":18721.8885450637}}
+[2025-03-07T15:09:30.205Z] [INFO] data fetched from sol tracker
+[2025-03-07T15:09:30.205Z] [INFO] [object Object]
+[2025-03-07T15:09:30.206Z] [INFO] Price increase for FekNJZ24mSqrScwTnzk5KaoF2gBmT1xKo3K8uaoJpump 14.285620987455516
+[2025-03-07T15:09:36.253Z] [INFO] data fetched from sol tracker
+[2025-03-07T15:09:36.256Z] [INFO] [object Object]
+[2025-03-07T15:09:36.258Z] [INFO] Price increase for FekNJZ24mSqrScwTnzk5KaoF2gBmT1xKo3K8uaoJpump 0.08636976892457263
+[2025-03-07T15:09:42.309Z] [INFO] data fetched from sol tracker
+[2025-03-07T15:09:42.311Z] [INFO] [object Object]
+[2025-03-07T15:09:42.314Z] [INFO] ✅ Sent FekNJZ24mSqrScwTnzk5KaoF2gBmT1xKo3K8uaoJpump to SELL queue. Up 16.96%
+[2025-03-07T15:09:42.316Z] [INFO] Price increase for FekNJZ24mSqrScwTnzk5KaoF2gBmT1xKo3K8uaoJpump 16.962065067531377
+[2025-03-07T15:09:42.320Z] [INFO] Message sent to "SELL": {"tokenMint":"FekNJZ24mSqrScwTnzk5KaoF2gBmT1xKo3K8uaoJpump","marketCap":24095.70591075734,"priceIncrease":16.962065067531377}
+[2025-03-07T15:09:42.327Z] [INFO] Received message from SELL: {"tokenMint":"FekNJZ24mSqrScwTnzk5KaoF2gBmT1xKo3K8uaoJpump","marketCap":24095.70591075734,"priceIncrease":16.962065067531377}
+[2025-03-07T15:09:43.044Z] [INFO] Received message from BUY: {"token":{"mintAddress":"FekNJZ24mSqrScwTnzk5KaoF2gBmT1xKo3K8uaoJpump"},"canBuy":[true,true,true,true],"comment":["✅ Token Market Cap is still above 50% of ATH. Token may be able to recover"],"data":{"marketCap":23658.51641844968}}
+[2025-03-07T15:09:44.195Z] [ERROR] Error selling meme token: FekNJZ24mSqrScwTnzk5KaoF2gBmT1xKo3K8uaoJpump Error: Failed to get swap route
+[2025-03-07T15:09:59.599Z] [INFO] Received message from BUY: {"token":{"mintAddress":"FekNJZ24mSqrScwTnzk5KaoF2gBmT1xKo3K8uaoJpump"},"canBuy":[true,true,true,true],"comment":["✅ Token Market Cap is still above 50% of ATH. Token may be able to recover"],"data":{"marketCap":34117.71826247367}}
+[2025-03-07T15:09:59.965Z] [INFO] Received message from BUY: {"token":{"mintAddress":"6Qa6Q6HMkHAgmWRST2tjpk4E3Jy3C34toZkWaTcypump"},"canBuy":[true,true,true,true],"comment":["✅ Token Market Cap is still above 50% of ATH. Token may be able to recover"],"data":{"marketCap":17708.628163725265}}
+[2025-03-07T15:10:06.231Z] [INFO] data fetched from sol tracker
+[2025-03-07T15:10:06.232Z] [INFO] [object Object]
+[2025-03-07T15:10:06.233Z] [INFO] ✅ Sent 6Qa6Q6HMkHAgmWRST2tjpk4E3Jy3C34toZkWaTcypump to SELL queue. Up 32.95%
+[2025-03-07T15:10:06.235Z] [INFO] Price increase for 6Qa6Q6HMkHAgmWRST2tjpk4E3Jy3C34toZkWaTcypump 32.94503572196885
+[2025-03-07T15:10:06.237Z] [INFO] Message sent to "SELL": {"tokenMint":"6Qa6Q6HMkHAgmWRST2tjpk4E3Jy3C34toZkWaTcypump","marketCap":23542.704595860574,"priceIncrease":32.94503572196885}
+[2025-03-07T15:10:06.241Z] [INFO] Received message from SELL: {"tokenMint":"6Qa6Q6HMkHAgmWRST2tjpk4E3Jy3C34toZkWaTcypump","marketCap":23542.704595860574,"priceIncrease":32.94503572196885}
+[2025-03-07T15:10:07.597Z] [ERROR] Error selling meme token: 6Qa6Q6HMkHAgmWRST2tjpk4E3Jy3C34toZkWaTcypump Error: Failed to get swap route
+[2025-03-07T15:10:14.432Z] [INFO] Received message from BUY: {"token":{"mintAddress":"6Qa6Q6HMkHAgmWRST2tjpk4E3Jy3C34toZkWaTcypump"},"canBuy":[true,true,true,true],"comment":["✅ Token Market Cap is still above 50% of ATH. Token may be able to recover"],"data":{"marketCap":26203.023451192275}}
+[2025-03-07T15:10:14.955Z] [INFO] Received message from BUY: {"token":{"mintAddress":"FekNJZ24mSqrScwTnzk5KaoF2gBmT1xKo3K8uaoJpump"},"canBuy":[true,true,true,true],"comment":["✅ Token Market Cap is still above 50% of ATH. Token may be able to recover"],"data":{"marketCap":35799.99300314032}}
+[2025-03-07T15:10:29.624Z] [INFO] Received message from BUY: {"token":{"mintAddress":"6Qa6Q6HMkHAgmWRST2tjpk4E3Jy3C34toZkWaTcypump"},"canBuy":[true,true,true,true],"comment":["✅ Token Market Cap is still above 50% of ATH. Token may be able to recover"],"data":{"marketCap":29424.841315491827}}
+[2025-03-07T15:10:30.142Z] [INFO] Received message from BUY: {"token":{"mintAddress":"FekNJZ24mSqrScwTnzk5KaoF2gBmT1xKo3K8uaoJpump"},"canBuy":[true,true,true,true],"comment":["✅ Token Market Cap is still above 50% of ATH. Token may be able to recover"],"data":{"marketCap":33259.967277652795}}
+[2025-03-07T15:10:46.003Z] [INFO] Received message from BUY: {"token":{"mintAddress":"6Qa6Q6HMkHAgmWRST2tjpk4E3Jy3C34toZkWaTcypump"},"canBuy":[true,true,true,true],"comment":["✅ Token Market Cap is still above 50% of ATH. Token may be able to recover"],"data":{"marketCap":19801.532570636205}}
+[2025-03-07T15:10:47.163Z] [INFO] Received message from BUY: {"token":{"mintAddress":"FekNJZ24mSqrScwTnzk5KaoF2gBmT1xKo3K8uaoJpump"},"canBuy":[true,true,true,true],"comment":["✅ Token Market Cap is still above 50% of ATH. Token may be able to recover"],"data":{"marketCap":27850.208220960896}}
+[2025-03-07T15:10:51.263Z] [ERROR] Error sending log to Telegram: Error: connect ETIMEDOUT 149.154.167.220:443
+[2025-03-07T15:11:02.364Z] [INFO] Received message from BUY: {"token":{"mintAddress":"FekNJZ24mSqrScwTnzk5KaoF2gBmT1xKo3K8uaoJpump"},"canBuy":[true,true,true,true],"comment":["✅ Token Market Cap is still above 50% of ATH. Token may be able to recover"],"data":{"marketCap":36727.785129475946}}
+[2025-03-07T15:12:09.916Z] [INFO] Received message from BUY: {"token":{"mintAddress":"FekNJZ24mSqrScwTnzk5KaoF2gBmT1xKo3K8uaoJpump"},"canBuy":[true,true,true,true],"comment":["✅ Token Market Cap is still above 50% of ATH. Token may be able to recover"],"data":{"marketCap":31366.54617688908}}
+[2025-03-07T15:12:25.868Z] [INFO] Received message from BUY: {"token":{"mintAddress":"FekNJZ24mSqrScwTnzk5KaoF2gBmT1xKo3K8uaoJpump"},"canBuy":[true,true,true,true],"comment":["✅ Token Market Cap is still above 50% of ATH. Token may be able to recover"],"data":{"marketCap":33890.644954460084}}
+[2025-03-07T15:12:26.205Z] [INFO] Received message from BUY: {"token":{"mintAddress":"CeHN71kNvCh7pdmFokxX99VNb7Dtm8G1jGjPsj6vpump"},"canBuy":[true,true,true,true],"comment":["✅ Token Market Cap is still above 50% of ATH. Token may be able to recover"],"data":{"marketCap":15269.722701153854}}
+[2025-03-07T15:12:30.587Z] [INFO] data fetched from sol tracker
+[2025-03-07T15:12:30.587Z] [INFO] [object Object]
+[2025-03-07T15:12:30.588Z] [INFO] ✅ Sent CeHN71kNvCh7pdmFokxX99VNb7Dtm8G1jGjPsj6vpump to SELL queue. Up 22.79%
+[2025-03-07T15:12:30.590Z] [INFO] Price increase for CeHN71kNvCh7pdmFokxX99VNb7Dtm8G1jGjPsj6vpump 22.79348386714873
+[2025-03-07T15:12:30.592Z] [INFO] Message sent to "SELL": {"tokenMint":"CeHN71kNvCh7pdmFokxX99VNb7Dtm8G1jGjPsj6vpump","marketCap":18750.19660606201,"priceIncrease":22.79348386714873}
+[2025-03-07T15:12:30.596Z] [INFO] Received message from SELL: {"tokenMint":"CeHN71kNvCh7pdmFokxX99VNb7Dtm8G1jGjPsj6vpump","marketCap":18750.19660606201,"priceIncrease":22.79348386714873}
+[2025-03-07T15:12:32.078Z] [ERROR] Error selling meme token: CeHN71kNvCh7pdmFokxX99VNb7Dtm8G1jGjPsj6vpump Error: Failed to get swap route
+[2025-03-07T15:12:40.692Z] [INFO] Received message from BUY: {"token":{"mintAddress":"FekNJZ24mSqrScwTnzk5KaoF2gBmT1xKo3K8uaoJpump"},"canBuy":[true,true,true,true],"comment":["✅ Token Market Cap is still above 50% of ATH. Token may be able to recover"],"data":{"marketCap":25672.674736775665}}
+[2025-03-07T15:12:56.544Z] [INFO] Received message from BUY: {"token":{"mintAddress":"FekNJZ24mSqrScwTnzk5KaoF2gBmT1xKo3K8uaoJpump"},"canBuy":[true,true,true,true],"comment":["✅ Token Market Cap is still above 50% of ATH. Token may be able to recover"],"data":{"marketCap":30837.993856209247}}
+[2025-03-07T15:13:13.614Z] [INFO] Received message from BUY: {"token":{"mintAddress":"FekNJZ24mSqrScwTnzk5KaoF2gBmT1xKo3K8uaoJpump"},"canBuy":[true,true,true,true],"comment":["✅ Token Market Cap is still above 50% of ATH. Token may be able to recover"],"data":{"marketCap":32450.849520444437}}
+[2025-03-07T15:13:29.549Z] [INFO] Received message from BUY: {"token":{"mintAddress":"FekNJZ24mSqrScwTnzk5KaoF2gBmT1xKo3K8uaoJpump"},"canBuy":[true,true,true,true],"comment":["✅ Token Market Cap is still above 50% of ATH. Token may be able to recover"],"data":{"marketCap":31411.260941437493}}
+[2025-03-07T15:13:43.654Z] [INFO] Received message from BUY: {"token":{"mintAddress":"FekNJZ24mSqrScwTnzk5KaoF2gBmT1xKo3K8uaoJpump"},"canBuy":[true,true,true,true],"comment":["✅ Token Market Cap is still above 50% of ATH. Token may be able to recover"],"data":{"marketCap":27029.232201078717}}
+[2025-03-07T15:14:13.074Z] [INFO] Received message from BUY: {"token":{"mintAddress":"4XYQ3YiKrzj66aGcJ955kEsiNjSXbPnrmuL4ssXtpump"},"canBuy":[true,true,true,true],"comment":["✅ Token Market Cap is still above 50% of ATH. Token may be able to recover"],"data":{"marketCap":15499.269570579008}}
+[2025-03-07T15:14:18.621Z] [INFO] data fetched from sol tracker
+[2025-03-07T15:14:18.622Z] [INFO] [object Object]
+[2025-03-07T15:14:18.623Z] [INFO] ✅ Sent 4XYQ3YiKrzj66aGcJ955kEsiNjSXbPnrmuL4ssXtpump to SELL queue. Up 16.26%
+[2025-03-07T15:14:18.626Z] [INFO] Price increase for 4XYQ3YiKrzj66aGcJ955kEsiNjSXbPnrmuL4ssXtpump 16.263904339233694
+[2025-03-07T15:14:18.628Z] [INFO] Message sent to "SELL": {"tokenMint":"4XYQ3YiKrzj66aGcJ955kEsiNjSXbPnrmuL4ssXtpump","marketCap":18020.091325250847,"priceIncrease":16.263904339233694}
+[2025-03-07T15:14:18.632Z] [INFO] Received message from SELL: {"tokenMint":"4XYQ3YiKrzj66aGcJ955kEsiNjSXbPnrmuL4ssXtpump","marketCap":18020.091325250847,"priceIncrease":16.263904339233694}
+[2025-03-07T15:14:20.154Z] [ERROR] Error selling meme token: 4XYQ3YiKrzj66aGcJ955kEsiNjSXbPnrmuL4ssXtpump Error: Failed to get swap route
+[2025-03-07T15:14:29.810Z] [INFO] Received message from BUY: {"token":{"mintAddress":"4XYQ3YiKrzj66aGcJ955kEsiNjSXbPnrmuL4ssXtpump"},"canBuy":[true,true,true,true],"comment":["✅ Token Market Cap is still above 50% of ATH. Token may be able to recover"],"data":{"marketCap":17869.251900678017}}
+[2025-03-07T15:14:48.684Z] [INFO] Received message from BUY: {"token":{"mintAddress":"4XYQ3YiKrzj66aGcJ955kEsiNjSXbPnrmuL4ssXtpump"},"canBuy":[true,true,true,true],"comment":["✅ Token Market Cap is still above 50% of ATH. Token may be able to recover"],"data":{"marketCap":15428.233259674571}}
+[2025-03-07T15:15:04.951Z] [INFO] Received message from BUY: {"token":{"mintAddress":"4XYQ3YiKrzj66aGcJ955kEsiNjSXbPnrmuL4ssXtpump"},"canBuy":[true,true,true,true],"comment":["✅ Token Market Cap is still above 50% of ATH. Token may be able to recover"],"data":{"marketCap":16774.433871895362}}
+[2025-03-07T15:15:29.860Z] [INFO] Received message from BUY: {"token":{"mintAddress":"4XYQ3YiKrzj66aGcJ955kEsiNjSXbPnrmuL4ssXtpump"},"canBuy":[true,true,true,true],"comment":["✅ Token Market Cap is still above 50% of ATH. Token may be able to recover"],"data":{"marketCap":15015.419587618046}}
+[2025-03-07T15:17:22.120Z] [INFO] Received message from BUY: {"token":{"mintAddress":"5XzPKzyYjwu9kw1XhCYFBNXTaEVBCfAQAbiJ3D4Tpump"},"canBuy":[true,true,true,true],"comment":["✅ Token Market Cap is still above 50% of ATH. Token may be able to recover"],"data":{"marketCap":27807.598197826886}}
+[2025-03-07T15:17:24.363Z] [INFO] data fetched from sol tracker
+[2025-03-07T15:17:24.364Z] [INFO] [object Object]
+[2025-03-07T15:17:24.366Z] [INFO] Price increase for 5XzPKzyYjwu9kw1XhCYFBNXTaEVBCfAQAbiJ3D4Tpump -0.21921197906226902
+[2025-03-07T15:17:30.363Z] [INFO] data fetched from sol tracker
+[2025-03-07T15:17:30.365Z] [INFO] [object Object]
+[2025-03-07T15:17:30.367Z] [INFO] Price increase for 5XzPKzyYjwu9kw1XhCYFBNXTaEVBCfAQAbiJ3D4Tpump -0.21921197906226902
+[2025-03-07T15:17:36.260Z] [INFO] data fetched from sol tracker
+[2025-03-07T15:17:36.262Z] [INFO] [object Object]
+[2025-03-07T15:17:36.263Z] [INFO] Price increase for 5XzPKzyYjwu9kw1XhCYFBNXTaEVBCfAQAbiJ3D4Tpump -0.21921197906226902
+[2025-03-07T15:17:38.679Z] [INFO] Received message from BUY: {"token":{"mintAddress":"5XzPKzyYjwu9kw1XhCYFBNXTaEVBCfAQAbiJ3D4Tpump"},"canBuy":[true,true,true,true],"comment":["✅ Token Market Cap is still above 50% of ATH. Token may be able to recover"],"data":{"marketCap":27807.598197826886}}
+[2025-03-07T15:17:42.331Z] [INFO] data fetched from sol tracker
+[2025-03-07T15:17:42.331Z] [INFO] [object Object]
+[2025-03-07T15:17:42.333Z] [INFO] Price increase for 5XzPKzyYjwu9kw1XhCYFBNXTaEVBCfAQAbiJ3D4Tpump -0.3134540247537338
+[2025-03-07T15:17:48.486Z] [INFO] data fetched from sol tracker
+[2025-03-07T15:17:48.488Z] [INFO] [object Object]
+[2025-03-07T15:17:48.489Z] [INFO] Price increase for 5XzPKzyYjwu9kw1XhCYFBNXTaEVBCfAQAbiJ3D4Tpump -0.25162053693877734
+[2025-03-07T15:17:51.992Z] [INFO] Received message from BUY: {"token":{"mintAddress":"91MSh8XpeqV6BwqHcud2RXGrCzRUU2E8Xco4EdP4pump"},"canBuy":[true,true,true,true],"comment":["✅ Token Market Cap is still above 50% of ATH. Token may be able to recover"],"data":{"marketCap":17998.096853753923}}
+[2025-03-07T15:17:52.353Z] [INFO] Received message from BUY: {"token":{"mintAddress":"5XzPKzyYjwu9kw1XhCYFBNXTaEVBCfAQAbiJ3D4Tpump"},"canBuy":[true,true,true,true],"comment":["✅ Token Market Cap is still above 50% of ATH. Token may be able to recover"],"data":{"marketCap":27851.842592107696}}
+[2025-03-07T15:17:54.317Z] [INFO] data fetched from sol tracker
+[2025-03-07T15:17:54.317Z] [INFO] [object Object]
+[2025-03-07T15:17:54.319Z] [INFO] Price increase for 5XzPKzyYjwu9kw1XhCYFBNXTaEVBCfAQAbiJ3D4Tpump -0.5066864673563176
+[2025-03-07T15:17:54.321Z] [INFO] Price increase for 91MSh8XpeqV6BwqHcud2RXGrCzRUU2E8Xco4EdP4pump -2.414372606989816
+[2025-03-07T15:18:00.243Z] [INFO] data fetched from sol tracker
+[2025-03-07T15:18:00.245Z] [INFO] [object Object]
+[2025-03-07T15:18:00.247Z] [INFO] Price increase for 5XzPKzyYjwu9kw1XhCYFBNXTaEVBCfAQAbiJ3D4Tpump 0.7466732374127034
+[2025-03-07T15:18:00.249Z] [INFO] Price increase for 91MSh8XpeqV6BwqHcud2RXGrCzRUU2E8Xco4EdP4pump -6.021422947763463
+[2025-03-07T15:18:06.337Z] [INFO] data fetched from sol tracker
+[2025-03-07T15:18:06.339Z] [INFO] [object Object]
+[2025-03-07T15:18:06.340Z] [INFO] Price increase for 5XzPKzyYjwu9kw1XhCYFBNXTaEVBCfAQAbiJ3D4Tpump 0.7466732374127034
+[2025-03-07T15:18:06.341Z] [INFO] Price increase for 91MSh8XpeqV6BwqHcud2RXGrCzRUU2E8Xco4EdP4pump -1.0857717596266592
+[2025-03-07T15:18:09.927Z] [INFO] Received message from BUY: {"token":{"mintAddress":"91MSh8XpeqV6BwqHcud2RXGrCzRUU2E8Xco4EdP4pump"},"canBuy":[true,true,true,true],"comment":["✅ Token Market Cap is still above 50% of ATH. Token may be able to recover"],"data":{"marketCap":18847.628568151165}}
+[2025-03-07T15:18:10.565Z] [INFO] Received message from BUY: {"token":{"mintAddress":"5XzPKzyYjwu9kw1XhCYFBNXTaEVBCfAQAbiJ3D4Tpump"},"canBuy":[true,true,true,true],"comment":["✅ Token Market Cap is still above 50% of ATH. Token may be able to recover"],"data":{"marketCap":28142.821922552128}}
+[2025-03-07T15:18:12.256Z] [INFO] data fetched from sol tracker
+[2025-03-07T15:18:12.257Z] [INFO] [object Object]
+[2025-03-07T15:18:12.260Z] [INFO] Price increase for 5XzPKzyYjwu9kw1XhCYFBNXTaEVBCfAQAbiJ3D4Tpump 0.5453855595173775
+[2025-03-07T15:18:12.262Z] [INFO] Price increase for 91MSh8XpeqV6BwqHcud2RXGrCzRUU2E8Xco4EdP4pump 1.295106394727918
+[2025-03-07T15:18:18.317Z] [INFO] data fetched from sol tracker
+[2025-03-07T15:18:18.319Z] [INFO] [object Object]
+[2025-03-07T15:18:18.321Z] [INFO] Price increase for 5XzPKzyYjwu9kw1XhCYFBNXTaEVBCfAQAbiJ3D4Tpump 0.7969708051711084
+[2025-03-07T15:18:18.322Z] [INFO] Price increase for 91MSh8XpeqV6BwqHcud2RXGrCzRUU2E8Xco4EdP4pump 9.088265540590216
+[2025-03-07T15:18:24.352Z] [INFO] data fetched from sol tracker
+[2025-03-07T15:18:24.354Z] [INFO] [object Object]
+[2025-03-07T15:18:24.355Z] [INFO] Price increase for 5XzPKzyYjwu9kw1XhCYFBNXTaEVBCfAQAbiJ3D4Tpump 0.8976098788397868
+[2025-03-07T15:18:24.357Z] [INFO] ✅ Sent 91MSh8XpeqV6BwqHcud2RXGrCzRUU2E8Xco4EdP4pump to SELL queue. Up 21.39%
+[2025-03-07T15:18:24.359Z] [INFO] Price increase for 91MSh8XpeqV6BwqHcud2RXGrCzRUU2E8Xco4EdP4pump 21.392371209695177
+[2025-03-07T15:18:24.361Z] [INFO] Message sent to "SELL": {"tokenMint":"91MSh8XpeqV6BwqHcud2RXGrCzRUU2E8Xco4EdP4pump","marketCap":21848.320362692146,"priceIncrease":21.392371209695177}
+[2025-03-07T15:18:24.365Z] [INFO] Received message from SELL: {"tokenMint":"91MSh8XpeqV6BwqHcud2RXGrCzRUU2E8Xco4EdP4pump","marketCap":21848.320362692146,"priceIncrease":21.392371209695177}
+[2025-03-07T15:18:24.929Z] [INFO] Received message from BUY: {"token":{"mintAddress":"91MSh8XpeqV6BwqHcud2RXGrCzRUU2E8Xco4EdP4pump"},"canBuy":[true,true,true,true],"comment":["✅ Token Market Cap is still above 50% of ATH. Token may be able to recover"],"data":{"marketCap":22554.878160120064}}
+[2025-03-07T15:18:25.433Z] [INFO] Received message from BUY: {"token":{"mintAddress":"5XzPKzyYjwu9kw1XhCYFBNXTaEVBCfAQAbiJ3D4Tpump"},"canBuy":[true,true,true,true],"comment":["✅ Token Market Cap is still above 50% of ATH. Token may be able to recover"],"data":{"marketCap":28163.900469797783}}
+[2025-03-07T15:18:28.003Z] [ERROR] Error selling meme token: 91MSh8XpeqV6BwqHcud2RXGrCzRUU2E8Xco4EdP4pump Error: Failed to get swap route
+[2025-03-07T15:18:30.311Z] [INFO] data fetched from sol tracker
+[2025-03-07T15:18:30.311Z] [INFO] [object Object]
+[2025-03-07T15:18:30.313Z] [INFO] Price increase for 5XzPKzyYjwu9kw1XhCYFBNXTaEVBCfAQAbiJ3D4Tpump 1.2766906263364675
