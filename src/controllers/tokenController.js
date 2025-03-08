@@ -113,7 +113,7 @@ export const checkForTokensToSell = async () => {
                 console.log(`✅ 🤑 💴 💵 💶 💷 💸 Sent ${token.token_mint} to SELL queue. Up ${priceIncrease.toFixed(2)}%`);
             }
 
-            if (priceIncrease <= -25) {     //Sell if token is dying to avoid 100% loss
+            if (priceIncrease <= -7) {     //Sell if token is dying to avoid 100% loss
                 const message = { tokenMint: token.token_mint, marketCap: tokenMarketCap, priceIncrease: priceIncrease };
                 rabbitMQService.sendToQueue("SELL", JSON.stringify(message));
                 console.log(`💔 Sent ${token.token_mint} to SELL queue. Down ${priceIncrease.toFixed(2)}%`);
