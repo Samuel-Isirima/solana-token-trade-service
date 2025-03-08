@@ -96,7 +96,7 @@ import {
     } catch (error) 
     {
       console.error(`Error buying meme token: ${tokenMint}. But it has been recorded in the database.`, error);
-        return {txid: "error", amount: 0, solBalanceBeforeBuy: balance}
+      return {txid: "error", amount: 0, solBalanceBeforeBuy: balance}
     // return null
     }
   }
