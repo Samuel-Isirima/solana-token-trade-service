@@ -95,7 +95,7 @@ import {
   
     } catch (error) 
     {
-      console.error("Error buying meme token:", error);
+      console.error(`Error buying meme token: ${tokenMint}`, error);
       return null
     }
   }

@@ -898,3 +898,156 @@
 [2025-03-07T15:18:30.311Z] [INFO] data fetched from sol tracker
 [2025-03-07T15:18:30.311Z] [INFO] [object Object]
 [2025-03-07T15:18:30.313Z] [INFO] Price increase for 5XzPKzyYjwu9kw1XhCYFBNXTaEVBCfAQAbiJ3D4Tpump 1.2766906263364675
+[2025-03-07T15:40:10.572Z] [ERROR] (node:2264) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+[2025-03-07T15:40:10.654Z] [INFO] Buying and selling service running on http://localhost:4100
+[2025-03-07T15:40:10.708Z] [INFO] Connected to RabbitMQ
+[2025-03-07T15:40:10.713Z] [INFO] Connected to RabbitMQ
+[2025-03-07T15:40:10.726Z] [INFO] Channel created for queue: "BUY"
+[2025-03-07T15:40:10.729Z] [INFO] Channel created for queue: "SELL"
+[2025-03-07T15:40:10.734Z] [INFO] Started consuming messages from "BUY"
+[2025-03-07T15:40:10.736Z] [INFO] Started consuming messages from "SELL"
+[2025-03-07T15:40:11.121Z] [INFO] Database synced successfully.
+[2025-03-07T15:40:58.691Z] [INFO] Received message from BUY: {"token":{"mintAddress":"H3ZBUXWKwZnC1H8VeCJd7mBoS7SxhJbkJfUsvqufpump"},"canBuy":[true,true,true,true],"comment":["✅ Token Market Cap is still above 50% of ATH. Token may be able to recover"],"data":{"marketCap":16142.18904693449}}
+[2025-03-07T15:41:01.346Z] [INFO] Wallet Balance: 0.250480128 SOL
+[2025-03-07T15:41:02.670Z] [ERROR] Error buying meme token: Error: Simulation failed. 
+Message: Transaction simulation failed: Error processing Instruction 6: custom program error: 0x1771. 
+Logs: 
+[
+  "Program 6EF8rrecthR5Dkzon8Nwu78hRvfCKubJ14M5uBEwF6P invoke [3]",
+  "Program 6EF8rrecthR5Dkzon8Nwu78hRvfCKubJ14M5uBEwF6P consumed 2003 of 1294034 compute units",
+  "Program 6EF8rrecthR5Dkzon8Nwu78hRvfCKubJ14M5uBEwF6P success",
+  "Program 6EF8rrecthR5Dkzon8Nwu78hRvfCKubJ14M5uBEwF6P consumed 38533 of 1329658 compute units",
+  "Program 6EF8rrecthR5Dkzon8Nwu78hRvfCKubJ14M5uBEwF6P success",
+  "Program JUP6LkbZbjS1jKKwapdHNy74zcZ3tLUZoi5QNyVTaV4 invoke [2]",
+  "Program JUP6LkbZbjS1jKKwapdHNy74zcZ3tLUZoi5QNyVTaV4 consumed 184 of 1289380 compute units",
+  "Program JUP6LkbZbjS1jKKwapdHNy74zcZ3tLUZoi5QNyVTaV4 success",
+  "Program JUP6LkbZbjS1jKKwapdHNy74zcZ3tLUZoi5QNyVTaV4 consumed 66130 of 1353845 compute units",
+  "Program JUP6LkbZbjS1jKKwapdHNy74zcZ3tLUZoi5QNyVTaV4 failed: custom program error: 0x1771"
+]. 
+Catch the `SendTransactionError` and call `getLogs()` on it for full details.
+[2025-03-07T15:42:28.074Z] [INFO] Received message from BUY: {"token":{"mintAddress":"7WDeHoXxpcZ4fid3KNGk9g63Y8JhEwV5U8JqQ4TWpump"},"canBuy":[true,true,true,true],"comment":["✅ Token Market Cap is still above 50% of ATH. Token may be able to recover"],"data":{"marketCap":16233.200951699882}}
+[2025-03-07T15:42:28.573Z] [INFO] Wallet Balance: 0.250480128 SOL
+[2025-03-07T15:42:29.718Z] [ERROR] Error buying meme token: Error: Simulation failed. 
+Message: Transaction simulation failed: Error processing Instruction 6: custom program error: 0x1771. 
+Logs: 
+[
+  "Program 6EF8rrecthR5Dkzon8Nwu78hRvfCKubJ14M5uBEwF6P invoke [3]",
+  "Program 6EF8rrecthR5Dkzon8Nwu78hRvfCKubJ14M5uBEwF6P consumed 2003 of 1292532 compute units",
+  "Program 6EF8rrecthR5Dkzon8Nwu78hRvfCKubJ14M5uBEwF6P success",
+  "Program 6EF8rrecthR5Dkzon8Nwu78hRvfCKubJ14M5uBEwF6P consumed 43033 of 1332656 compute units",
+  "Program 6EF8rrecthR5Dkzon8Nwu78hRvfCKubJ14M5uBEwF6P success",
+  "Program JUP6LkbZbjS1jKKwapdHNy74zcZ3tLUZoi5QNyVTaV4 invoke [2]",
+  "Program JUP6LkbZbjS1jKKwapdHNy74zcZ3tLUZoi5QNyVTaV4 consumed 184 of 1287878 compute units",
+  "Program JUP6LkbZbjS1jKKwapdHNy74zcZ3tLUZoi5QNyVTaV4 success",
+  "Program JUP6LkbZbjS1jKKwapdHNy74zcZ3tLUZoi5QNyVTaV4 consumed 70632 of 1356845 compute units",
+  "Program JUP6LkbZbjS1jKKwapdHNy74zcZ3tLUZoi5QNyVTaV4 failed: custom program error: 0x1771"
+]. 
+Catch the `SendTransactionError` and call `getLogs()` on it for full details.
+[2025-03-07T15:42:45.925Z] [INFO] Received message from BUY: {"token":{"mintAddress":"7WDeHoXxpcZ4fid3KNGk9g63Y8JhEwV5U8JqQ4TWpump"},"canBuy":[true,true,true,true],"comment":["✅ Token Market Cap is still above 50% of ATH. Token may be able to recover"],"data":{"marketCap":22449.19794495816}}
+[2025-03-07T15:42:46.434Z] [INFO] Wallet Balance: 0.250480128 SOL
+[2025-03-07T15:42:46.655Z] [INFO] Received message from BUY: {"token":{"mintAddress":"FmDu5HZ6JptDpbfCNe8D9zvsCdfBKcgyMrzj7Lurpump"},"canBuy":[true,true,true,true],"comment":["✅ Token Market Cap is still above 50% of ATH. Token may be able to recover"],"data":{"marketCap":17185.009490223794}}
+[2025-03-07T15:42:46.854Z] [INFO] Wallet Balance: 0.250480128 SOL
+[2025-03-07T15:42:48.677Z] [ERROR] Error buying meme token: Error: Simulation failed. 
+Message: Status: ({"err":{"InstructionError":[6,{"Custom":6001}]}}). 
+
+Catch the `SendTransactionError` and call `getLogs()` on it for full details.
+[2025-03-07T15:43:01.101Z] [INFO] Received message from BUY: {"token":{"mintAddress":"7WDeHoXxpcZ4fid3KNGk9g63Y8JhEwV5U8JqQ4TWpump"},"canBuy":[true,true,true,true],"comment":["✅ Token Market Cap is still above 50% of ATH. Token may be able to recover"],"data":{"marketCap":27317.463250570345}}
+[2025-03-07T15:43:01.637Z] [INFO] Wallet Balance: 0.148240852 SOL
+[2025-03-07T15:43:05.846Z] [INFO] ✅ Swap successful! 
+ Token 7WDeHoXxpcZ4fid3KNGk9g63Y8JhEwV5U8JqQ4TWpump bought with 0.1 SOL. 
+ Transaction hash: 2MPGPcLiPV1FZnVsn82C6XXufQwvkJjjxjt8thxSXcZ3bPqwvkqvyAi1rvdYigxxKYWppA1E2tdKSoVGNoiMi1D5
+[2025-03-07T15:43:11.435Z] [INFO] data fetched from sol tracker
+[2025-03-07T15:43:11.440Z] [INFO] [object Object]
+[2025-03-07T15:43:11.444Z] [INFO] Price increase for 7WDeHoXxpcZ4fid3KNGk9g63Y8JhEwV5U8JqQ4TWpump 14.865974404907597
+[2025-03-07T15:43:17.603Z] [ERROR] Error buying meme token: TransactionExpiredTimeoutError: Transaction was not confirmed in 30.00 seconds. It is unknown if it succeeded or failed. Check signature 8YJGy5NCiCub7izpLnxw2m8U7ofyj3SwES6AQT2RDxvtQqXibDitfB2oma49F9wjqskzLyPgzgYQSbuhSgYoJgF using the Solana Explorer or CLI tools.
+[2025-03-07T15:43:22.627Z] [INFO] data fetched from sol tracker
+[2025-03-07T15:43:22.629Z] [INFO] [object Object]
+[2025-03-07T15:43:22.632Z] [INFO] Price increase for 7WDeHoXxpcZ4fid3KNGk9g63Y8JhEwV5U8JqQ4TWpump 1.931348091570117
+[2025-03-07T15:43:23.891Z] [INFO] data fetched from sol tracker
+[2025-03-07T15:43:23.892Z] [INFO] [object Object]
+[2025-03-07T15:43:23.892Z] [INFO] ✅ Sent 7WDeHoXxpcZ4fid3KNGk9g63Y8JhEwV5U8JqQ4TWpump to SELL queue. Up 15.38%
+[2025-03-07T15:43:23.893Z] [INFO] Price increase for 7WDeHoXxpcZ4fid3KNGk9g63Y8JhEwV5U8JqQ4TWpump 15.384339474031645
+[2025-03-07T15:43:23.896Z] [INFO] Message sent to "SELL": {"tokenMint":"7WDeHoXxpcZ4fid3KNGk9g63Y8JhEwV5U8JqQ4TWpump","marketCap":31520.116935818594,"priceIncrease":15.384339474031645}
+[2025-03-07T15:43:23.902Z] [INFO] Received message from SELL: {"tokenMint":"7WDeHoXxpcZ4fid3KNGk9g63Y8JhEwV5U8JqQ4TWpump","marketCap":31520.116935818594,"priceIncrease":15.384339474031645}
+[2025-03-07T15:43:28.456Z] [INFO] ✅ Swap successful! 
+ Token 7WDeHoXxpcZ4fid3KNGk9g63Y8JhEwV5U8JqQ4TWpump sold successfully. 
+ Transaction hash: 3vQsWEXPXW46YPg9MwdtT3mr1hkBqWvKATyygAaCcqJK4kuz6uAnEZWh5wTsfEPAR5GFDKvyoAQGgBmyyQSG9kiX
+[2025-03-07T15:43:28.855Z] [INFO] data fetched from sol tracker
+[2025-03-07T15:43:28.856Z] [INFO] [object Object]
+[2025-03-07T15:43:28.857Z] [INFO] Price increase for 7WDeHoXxpcZ4fid3KNGk9g63Y8JhEwV5U8JqQ4TWpump 14.275165085748773
+[2025-03-07T15:43:29.154Z] [INFO] Received message from BUY: {"token":{"mintAddress":"7WDeHoXxpcZ4fid3KNGk9g63Y8JhEwV5U8JqQ4TWpump"},"canBuy":[true,true,true,true],"comment":["✅ Token Market Cap is still above 50% of ATH. Token may be able to recover"],"data":{"marketCap":26275.96127288808}}
+[2025-03-07T15:43:29.650Z] [INFO] Received message from BUY: {"token":{"mintAddress":"5S6vVJ9yDaqDgCk9nS39Yeuy91dLBaL5jX5wGmRbpump"},"canBuy":[true,true,true,true],"comment":["✅ Token Market Cap is still above 50% of ATH. Token may be able to recover"],"data":{"marketCap":19509.99233261272}}
+[2025-03-07T15:43:29.829Z] [INFO] Wallet Balance: 0.17036882 SOL
+[2025-03-07T15:43:30.715Z] [ERROR] Error buying meme token: Error: Simulation failed. 
+Message: Transaction simulation failed: Error processing Instruction 6: custom program error: 0x1771. 
+Logs: 
+[
+  "Program 6EF8rrecthR5Dkzon8Nwu78hRvfCKubJ14M5uBEwF6P invoke [3]",
+  "Program 6EF8rrecthR5Dkzon8Nwu78hRvfCKubJ14M5uBEwF6P consumed 2003 of 1294032 compute units",
+  "Program 6EF8rrecthR5Dkzon8Nwu78hRvfCKubJ14M5uBEwF6P success",
+  "Program 6EF8rrecthR5Dkzon8Nwu78hRvfCKubJ14M5uBEwF6P consumed 40033 of 1331156 compute units",
+  "Program 6EF8rrecthR5Dkzon8Nwu78hRvfCKubJ14M5uBEwF6P success",
+  "Program JUP6LkbZbjS1jKKwapdHNy74zcZ3tLUZoi5QNyVTaV4 invoke [2]",
+  "Program JUP6LkbZbjS1jKKwapdHNy74zcZ3tLUZoi5QNyVTaV4 consumed 184 of 1289378 compute units",
+  "Program JUP6LkbZbjS1jKKwapdHNy74zcZ3tLUZoi5QNyVTaV4 success",
+  "Program JUP6LkbZbjS1jKKwapdHNy74zcZ3tLUZoi5QNyVTaV4 consumed 67632 of 1355345 compute units",
+  "Program JUP6LkbZbjS1jKKwapdHNy74zcZ3tLUZoi5QNyVTaV4 failed: custom program error: 0x1771"
+]. 
+Catch the `SendTransactionError` and call `getLogs()` on it for full details.
+[2025-03-07T15:43:46.593Z] [INFO] Received message from BUY: {"token":{"mintAddress":"7WDeHoXxpcZ4fid3KNGk9g63Y8JhEwV5U8JqQ4TWpump"},"canBuy":[true,true,true,true],"comment":["✅ Token Market Cap is still above 50% of ATH. Token may be able to recover"],"data":{"marketCap":25558.24523468887}}
+[2025-03-07T15:43:47.040Z] [INFO] Received message from BUY: {"token":{"mintAddress":"5S6vVJ9yDaqDgCk9nS39Yeuy91dLBaL5jX5wGmRbpump"},"canBuy":[true,true,true,true],"comment":["✅ Token Market Cap is still above 50% of ATH. Token may be able to recover"],"data":{"marketCap":21723.658711831118}}
+[2025-03-07T15:43:47.571Z] [INFO] Wallet Balance: 0.17036882 SOL
+[2025-03-07T15:43:48.873Z] [ERROR] Error buying meme token: Error: Simulation failed. 
+Message: Transaction simulation failed: Error processing Instruction 6: custom program error: 0x1771. 
+Logs: 
+[
+  "Program 6EF8rrecthR5Dkzon8Nwu78hRvfCKubJ14M5uBEwF6P invoke [3]",
+  "Program 6EF8rrecthR5Dkzon8Nwu78hRvfCKubJ14M5uBEwF6P consumed 2003 of 1294034 compute units",
+  "Program 6EF8rrecthR5Dkzon8Nwu78hRvfCKubJ14M5uBEwF6P success",
+  "Program 6EF8rrecthR5Dkzon8Nwu78hRvfCKubJ14M5uBEwF6P consumed 40032 of 1331157 compute units",
+  "Program 6EF8rrecthR5Dkzon8Nwu78hRvfCKubJ14M5uBEwF6P success",
+  "Program JUP6LkbZbjS1jKKwapdHNy74zcZ3tLUZoi5QNyVTaV4 invoke [2]",
+  "Program JUP6LkbZbjS1jKKwapdHNy74zcZ3tLUZoi5QNyVTaV4 consumed 184 of 1289380 compute units",
+  "Program JUP6LkbZbjS1jKKwapdHNy74zcZ3tLUZoi5QNyVTaV4 success",
+  "Program JUP6LkbZbjS1jKKwapdHNy74zcZ3tLUZoi5QNyVTaV4 consumed 67630 of 1355345 compute units",
+  "Program JUP6LkbZbjS1jKKwapdHNy74zcZ3tLUZoi5QNyVTaV4 failed: custom program error: 0x1771"
+]. 
+Catch the `SendTransactionError` and call `getLogs()` on it for full details.
+[2025-03-07T15:44:03.264Z] [INFO] Received message from BUY: {"token":{"mintAddress":"5S6vVJ9yDaqDgCk9nS39Yeuy91dLBaL5jX5wGmRbpump"},"canBuy":[true,true,true,true],"comment":["✅ Token Market Cap is still above 50% of ATH. Token may be able to recover"],"data":{"marketCap":38243.6628155217}}
+[2025-03-07T15:44:03.493Z] [INFO] Received message from BUY: {"token":{"mintAddress":"88ctpjd9GLreKmGHSFX7FMmKJCWZSbYQcdDHL8npump"},"canBuy":[true,true,true,true],"comment":["✅ Token Market Cap is still above 50% of ATH. Token may be able to recover"],"data":{"marketCap":16660.02960611326}}
+[2025-03-07T15:44:04.039Z] [INFO] Wallet Balance: 0.17036882 SOL
+[2025-03-07T15:44:04.189Z] [INFO] Wallet Balance: 0.17036882 SOL
+[2025-03-07T15:44:05.299Z] [ERROR] Error buying meme token: Error: Simulation failed. 
+Message: Transaction simulation failed: Error processing Instruction 6: custom program error: 0x1771. 
+Logs: 
+[
+  "Program 6EF8rrecthR5Dkzon8Nwu78hRvfCKubJ14M5uBEwF6P invoke [3]",
+  "Program 6EF8rrecthR5Dkzon8Nwu78hRvfCKubJ14M5uBEwF6P consumed 2003 of 1294032 compute units",
+  "Program 6EF8rrecthR5Dkzon8Nwu78hRvfCKubJ14M5uBEwF6P success",
+  "Program 6EF8rrecthR5Dkzon8Nwu78hRvfCKubJ14M5uBEwF6P consumed 40033 of 1331156 compute units",
+  "Program 6EF8rrecthR5Dkzon8Nwu78hRvfCKubJ14M5uBEwF6P success",
+  "Program JUP6LkbZbjS1jKKwapdHNy74zcZ3tLUZoi5QNyVTaV4 invoke [2]",
+  "Program JUP6LkbZbjS1jKKwapdHNy74zcZ3tLUZoi5QNyVTaV4 consumed 184 of 1289378 compute units",
+  "Program JUP6LkbZbjS1jKKwapdHNy74zcZ3tLUZoi5QNyVTaV4 success",
+  "Program JUP6LkbZbjS1jKKwapdHNy74zcZ3tLUZoi5QNyVTaV4 consumed 67632 of 1355345 compute units",
+  "Program JUP6LkbZbjS1jKKwapdHNy74zcZ3tLUZoi5QNyVTaV4 failed: custom program error: 0x1771"
+]. 
+Catch the `SendTransactionError` and call `getLogs()` on it for full details.
+[2025-03-07T15:44:05.430Z] [ERROR] Server responded with 429 Too Many Requests.  Retrying after 500ms delay...
+[2025-03-07T15:44:06.304Z] [ERROR] Error buying meme token: Error: Simulation failed. 
+Message: Transaction simulation failed: Error processing Instruction 6: custom program error: 0x1771. 
+Logs: 
+[
+  "Program 6EF8rrecthR5Dkzon8Nwu78hRvfCKubJ14M5uBEwF6P invoke [3]",
+  "Program 6EF8rrecthR5Dkzon8Nwu78hRvfCKubJ14M5uBEwF6P consumed 2003 of 1294040 compute units",
+  "Program 6EF8rrecthR5Dkzon8Nwu78hRvfCKubJ14M5uBEwF6P success",
+  "Program 6EF8rrecthR5Dkzon8Nwu78hRvfCKubJ14M5uBEwF6P consumed 41525 of 1332656 compute units",
+  "Program 6EF8rrecthR5Dkzon8Nwu78hRvfCKubJ14M5uBEwF6P success",
+  "Program JUP6LkbZbjS1jKKwapdHNy74zcZ3tLUZoi5QNyVTaV4 invoke [2]",
+  "Program JUP6LkbZbjS1jKKwapdHNy74zcZ3tLUZoi5QNyVTaV4 consumed 184 of 1289386 compute units",
+  "Program JUP6LkbZbjS1jKKwapdHNy74zcZ3tLUZoi5QNyVTaV4 success",
+  "Program JUP6LkbZbjS1jKKwapdHNy74zcZ3tLUZoi5QNyVTaV4 consumed 69124 of 1356845 compute units",
+  "Program JUP6LkbZbjS1jKKwapdHNy74zcZ3tLUZoi5QNyVTaV4 failed: custom program error: 0x1771"
+]. 
+Catch the `SendTransactionError` and call `getLogs()` on it for full details.

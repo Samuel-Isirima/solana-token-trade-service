@@ -113,7 +113,7 @@ export const checkForTokensToSell = async () => {
                 console.log(`✅ Sent ${token.token_mint} to SELL queue. Up ${priceIncrease.toFixed(2)}%`);
             }
 
-            if (priceIncrease <= -30) {     //Sell if token is dying to avoid 100% loss
+            if (priceIncrease <= -10) {     //Sell if token is dying to avoid 100% loss
                 const message = { tokenMint: token.token_mint, marketCap: tokenMarketCap, priceIncrease: priceIncrease };
                 rabbitMQService.sendToQueue("SELL", JSON.stringify(message));
                 console.log(`💔 Sent ${token.token_mint} to SELL queue. Down ${priceIncrease.toFixed(2)}%`);
@@ -142,17 +142,17 @@ export const buyToken = async (queueMessage) => {
     const trade = await Token.findOne({ where: { token_mint: tokenMint } })
     if(trade)
         return    //Dont buy again
-    // const transaction = await buyMemeToken(tokenMint)
-    // if(transaction?.txid)
-    // {
-    //     // console.log('BUY MEMECOIN SUCCESSFUL')
-    //     // console.log(transaction)
-    //     await writeTokenToDatabase("token", tokenMint, parseFloat(tokenObject.data.marketCap), 2, 10000, transaction.txid, transaction.solBalanceBeforeBuy)
-    // }
+    const transaction = await buyMemeToken(tokenMint)
+    if(transaction?.txid)
+    {
+        // console.log('BUY MEMECOIN SUCCESSFUL')
+        // console.log(transaction)
+        await writeTokenToDatabase("token", tokenMint, parseFloat(tokenObject.data.marketCap), 2, 10000, transaction.txid, transaction.solBalanceBeforeBuy)
+    }
 
     // process.exit(0);
-    // For testing
-    await writeTokenToDatabase("no-name", tokenMint, parseFloat(tokenObject.data.marketCap), 2, 1000, "4subasieowihsioaava", 110)
+    //For testing
+    //await writeTokenToDatabase("no-name", tokenMint, parseFloat(tokenObject.filters.marketCapFilter.data.marketCap), 2, 1000, "4subasieowihsioaava", 110)
 
 }
 
@@ -161,12 +161,12 @@ export const sellToken = async (queueMessage) => {
     var tokenObject = JSON.parse(queueMessage)
     const tokenMint = tokenObject.tokenMint
     const transaction = await sellMemeToken(tokenMint, tokenObject.amount)
-    // if(transaction)
-    // {
-    //     await updateTokenAfterSell(tokenMint, transaction.txid, transaction.solBalanceAfterSell, transaction.solBalanceBeforeSell, tokenObject.marketCap, tokenObject.priceIncrease)
-    // }
+    if(transaction)
+    {
+        await updateTokenAfterSell(tokenMint, transaction.txid, transaction.solBalanceAfterSell, transaction.solBalanceBeforeSell, tokenObject.marketCap, tokenObject.priceIncrease)
+    }
     //For testing
-    await updateTokenAfterSell(tokenMint, "tid", 110, 120, tokenObject.marketCap, tokenObject.priceIncrease)
+    //await updateTokenAfterSell(tokenMint, "tid", 110, 120, tokenObject.marketCap, tokenObject.priceIncrease)
 
 }
 
