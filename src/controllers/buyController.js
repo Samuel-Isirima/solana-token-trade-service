@@ -38,7 +38,7 @@ import {
   const buyMemeToken = async (tokenMint) => {
     try {
       // Check wallet balance before proceeding
-      const balance = await getWalletBalance(wallet.publicKey);
+      var balance = await getWalletBalance(wallet.publicKey);
       console.log(`Wallet Balance: ${balance} SOL`);
   
       if (balance < SOL_AMOUNT) {
@@ -95,8 +95,9 @@ import {
   
     } catch (error) 
     {
-      console.error(`Error buying meme token: ${tokenMint}`, error);
-      return null
+      console.error(`Error buying meme token: ${tokenMint}. But it has been recorded in the database.`, error);
+        return {txid: "error", amount: 0, solBalanceBeforeBuy: balance}
+    // return null
     }
   }
   

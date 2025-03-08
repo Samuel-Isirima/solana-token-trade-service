@@ -110,7 +110,7 @@ export const checkForTokensToSell = async () => {
             if (priceIncrease >= 15) {
                 const message = { tokenMint: token.token_mint, marketCap: tokenMarketCap, priceIncrease: priceIncrease };
                 rabbitMQService.sendToQueue("SELL", JSON.stringify(message));
-                console.log(`✅ Sent ${token.token_mint} to SELL queue. Up ${priceIncrease.toFixed(2)}%`);
+                console.log(`✅ 🤑 💴 💵 💶 💷 💸 Sent ${token.token_mint} to SELL queue. Up ${priceIncrease.toFixed(2)}%`);
             }
 
             if (priceIncrease <= -10) {     //Sell if token is dying to avoid 100% loss
@@ -119,14 +119,14 @@ export const checkForTokensToSell = async () => {
                 console.log(`💔 Sent ${token.token_mint} to SELL queue. Down ${priceIncrease.toFixed(2)}%`);
             }
 
-            if(getMinutesSinceCreation(token.createdAt) >= 5 && priceIncrease > -10 && priceIncrease < 10)
+            if(getMinutesSinceCreation(token.createdAt) >= 4 && priceIncrease > -5 && priceIncrease < 10)
             {
                 const message = { tokenMint: token.token_mint, marketCap: tokenMarketCap, priceIncrease: priceIncrease };
                 rabbitMQService.sendToQueue("SELL", JSON.stringify(message));
                 console.log(`💔 Sent ${token.token_mint} to SELL queue. No trades. Price still at ${priceIncrease.toFixed(2)}% after 5 minutes`);
             }
 
-            console.log('Price increase for '+token.token_mint, priceIncrease)
+            console.log(`Price increase for ${token.token_mint}: `, priceIncrease)
         }
     } catch (error) {
         console.error('Error fetching market cap data:', error);
@@ -148,6 +148,25 @@ export const buyToken = async (queueMessage) => {
         // console.log('BUY MEMECOIN SUCCESSFUL')
         // console.log(transaction)
         await writeTokenToDatabase("token", tokenMint, parseFloat(tokenObject.data.marketCap), 2, 10000, transaction.txid, transaction.solBalanceBeforeBuy)
+            if(transaction.txid == "error")
+            {
+                //Update the written record as sold so there's no api calls for the token with error
+                const token = await Token.findOne({ where: { token_mint: tokenMint } });
+  
+                if (!token) {
+                  throw new Error(`Token with mint ${tokenMint} not found`);
+                }
+            
+                // Calculate Profit & Loss (PnL)
+                const pnl = 0;
+            
+                // Update the token fields
+                await token.update({
+                  selltxsignature: "error",
+                  sold: true,
+                  pnl: 0, // Store profit/loss
+                });
+            }
     }
 
     // process.exit(0);
