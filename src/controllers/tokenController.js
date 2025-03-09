@@ -108,7 +108,7 @@ export const checkForTokensToSell = async () => {
             const buyMarketCap = parseFloat(token.buy_marketcap);
             const priceIncrease = ((tokenMarketCap - buyMarketCap) / buyMarketCap) * 100;
             
-            if (priceIncrease >= 15) {
+            if (priceIncrease >= PERCENTAGE_PROFIT) {
                 const message = { tokenMint: token.token_mint, marketCap: tokenMarketCap, priceIncrease: priceIncrease };
                 rabbitMQService.sendToQueue("SELL", JSON.stringify(message));
                 console.log(`✅ 🤑 💴 💵 💶 💷 💸 Sent ${token.token_mint} to SELL queue. Up ${priceIncrease.toFixed(2)}%`);
