@@ -8,6 +8,7 @@ import sellMemeToken from "./sellController.js";
 
 const SOLANA_TRACKER_API = 'https://data.solanatracker.io/price/multi';
 const API_KEY = process.env.SOLANA_TRACKER_API_KEY;
+const PERCENTAGE_PROFIT = process.env.PERCENTAGE_PROFIT
 
 async function writeTokenToDatabase(name, token_mint, buy_marketcap, age, buy_quantity, buytxsignature, solbalancebeforebuy) {
   try {
