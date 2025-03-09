@@ -142,14 +142,21 @@ export const buyToken = async (queueMessage) => {
     const trade = await Token.findOne({ where: { token_mint: tokenMint } })
     if(trade)
         return    //Dont buy again
-    const transaction = await buyMemeToken(tokenMint)
+    var transaction = await buyMemeToken(tokenMint)
     if(transaction?.txid)
     {
+        if(transaction.txid == "error")
+        {
+            //retry buying again
+            var transaction = await buyMemeToken(tokenMint)
+           await writeTokenToDatabase("token", tokenMint, parseFloat(tokenObject.data.marketCap), 2, 10000, transaction.txid, transaction.solBalanceBeforeBuy)
+           return
+    }
         // console.log('BUY MEMECOIN SUCCESSFUL')
         // console.log(transaction)
         await writeTokenToDatabase("token", tokenMint, parseFloat(tokenObject.data.marketCap), 2, 10000, transaction.txid, transaction.solBalanceBeforeBuy)
         //even it it throws an error, there's a good chance the token was actually bought
-        
+
             // if(transaction.txid == "error")
             // {
             //     //Update the written record as sold so there's no api calls for the token with error
