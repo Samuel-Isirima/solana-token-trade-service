@@ -78,13 +78,13 @@ const sendToTelegram = async (message) => {
   console.log = (...args) => {
     const message = args.join(' ');
     logger.info(message);
-    sendToTelegram(`[LOG] ${message}`);
+    // sendToTelegram(`[LOG] ${message}`);
   };
   
   console.error = (...args) => {
     const message = args.join(' ');
     logger.error(message);
-    sendToTelegram(`[ERROR] ${message}`);
+    // sendToTelegram(`[ERROR] ${message}`);
   };
   
   // Capture uncaught exceptions and unhandled rejections
