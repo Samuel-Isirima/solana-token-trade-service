@@ -49,7 +49,7 @@ import {
     //   console.log("✅ Sufficient balance, proceeding with the swap...");
   
       // Fetch the best swap route from Jupiter
-      const quoteUrl = `https://quote-api.jup.ag/v6/quote?inputMint=So11111111111111111111111111111111111111112&outputMint=${tokenMint}&amount=${LAMPORTS}&slippageBps=50`;
+      const quoteUrl = `https://quote-api.jup.ag/v6/quote?inputMint=So11111111111111111111111111111111111111112&outputMint=${tokenMint}&amount=${LAMPORTS}&slippageBps=500`;
       const quoteResponse = await fetch(quoteUrl);
       const quote = await quoteResponse.json();
   

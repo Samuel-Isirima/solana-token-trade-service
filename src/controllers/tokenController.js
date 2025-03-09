@@ -148,7 +148,7 @@ export const buyToken = async (queueMessage) => {
         if(transaction.txid == "error")
         {
                 // Retry once after 800ms
-                await new Promise((resolve) => setTimeout(resolve, 2000));
+                await new Promise((resolve) => setTimeout(resolve, 1000));
                 transaction = await buyMemeToken(tokenMint);
                     if(transaction.txid == "error")
                     {

@@ -42,7 +42,7 @@ const sellMemeToken = async (tokenMint, tokenAmount) => {
     // console.log("✅ Proceeding with the swap...");
 
     // Fetch the best swap route from Jupiter
-    const quoteUrl = `https://quote-api.jup.ag/v6/quote?inputMint=${tokenMint}&outputMint=So11111111111111111111111111111111111111112&amount=${tokenAmount}&slippageBps=50`;
+    const quoteUrl = `https://quote-api.jup.ag/v6/quote?inputMint=${tokenMint}&outputMint=So11111111111111111111111111111111111111112&amount=${tokenAmount}&slippageBps=500`;
     const quoteResponse = await fetch(quoteUrl);
     const quote = await quoteResponse.json();
 
