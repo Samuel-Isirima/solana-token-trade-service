@@ -35,7 +35,7 @@ const sellMemeToken = async (tokenMint, tokenAmount) => {
   try {
 
     // Check wallet balance before proceeding
-    const balanceBeforeSell = await getWalletBalance(wallet.publicKey);
+    var balanceBeforeSell = await getWalletBalance(wallet.publicKey);
     tokenAmount = await getTokenBalance(connection, SOLANA_WALLET_ADDRESS, tokenMint)
     // console.log(`Wallet Balance: ${tokenAmount} SOL`);
 
@@ -88,14 +88,14 @@ const sellMemeToken = async (tokenMint, tokenAmount) => {
     console.log(`✅ Swap successful! \n Token ${tokenMint} sold successfully. \n Transaction hash: ${txid}`);
     
     // Check wallet balance before proceeding
-    const balanceAfterSell = await getWalletBalance(wallet.publicKey);
+    var balanceAfterSell = await getWalletBalance(wallet.publicKey);
     // console.log(`Wallet Balance after selling: ${balanceAfterSell} SOL`);
 
     return {txid: txid, solBalanceBeforeSell: balanceBeforeSell, solBalanceAfterSell: balanceAfterSell}
 
   } catch (error) {
     console.error(`Error selling meme token: ${tokenMint}`, error);
-    return null
+      return {txid: "error", solBalanceBeforeSell: balanceBeforeSell, solBalanceBeforeBuy: balanceAfterSell}
   }
 }
 

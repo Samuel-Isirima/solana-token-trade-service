@@ -147,35 +147,23 @@ export const buyToken = async (queueMessage) => {
     {
         if(transaction.txid == "error")
         {
-            //retry buying again
-            var transaction = await buyMemeToken(tokenMint)
-           await writeTokenToDatabase("token", tokenMint, parseFloat(tokenObject.data.marketCap), 2, 10000, transaction.txid, transaction.solBalanceBeforeBuy)
-           return
-    }
-        // console.log('BUY MEMECOIN SUCCESSFUL')
-        // console.log(transaction)
-        await writeTokenToDatabase("token", tokenMint, parseFloat(tokenObject.data.marketCap), 2, 10000, transaction.txid, transaction.solBalanceBeforeBuy)
-        //even it it throws an error, there's a good chance the token was actually bought
-
-            // if(transaction.txid == "error")
-            // {
-            //     //Update the written record as sold so there's no api calls for the token with error
-            //     const token = await Token.findOne({ where: { token_mint: tokenMint } });
-  
-            //     if (!token) {
-            //       throw new Error(`Token with mint ${tokenMint} not found`);
-            //     }
-            
-            //     // Calculate Profit & Loss (PnL)
-            //     const pnl = 0;
-            
-            //     // Update the token fields
-            //     await token.update({
-            //       selltxsignature: "error",
-            //       sold: true,
-            //       pnl: 0, // Store profit/loss
-            //     });
-            // }
+                // Retry once after 800ms
+                await new Promise((resolve) => setTimeout(resolve, 800));
+                transaction = await buyMemeToken(tokenMint);
+                    if(transaction.txid == "error")
+                    {
+                        await writeTokenToDatabase("error", tokenMint, parseFloat(tokenObject.data.marketCap), 2, 10000, "error", transaction.solBalanceBeforeBuy)
+                    }
+                    else
+                    {
+                        await writeTokenToDatabase("token", tokenMint, parseFloat(tokenObject.data.marketCap), 2, 10000, transaction.txid, transaction.solBalanceBeforeBuy)
+                    }
+        }
+        else
+        {
+            await writeTokenToDatabase("token", tokenMint, parseFloat(tokenObject.data.marketCap), 2, 10000, transaction.txid, transaction.solBalanceBeforeBuy)
+        }
+       
     }
 
     // process.exit(0);
@@ -188,10 +176,21 @@ export const buyToken = async (queueMessage) => {
 export const sellToken = async (queueMessage) => {
     var tokenObject = JSON.parse(queueMessage)
     const tokenMint = tokenObject.tokenMint
-    const transaction = await sellMemeToken(tokenMint, tokenObject.amount)
-    if(transaction)
+    var transaction = await sellMemeToken(tokenMint, tokenObject.amount)
+    if(transaction?.txid)
     {
-        await updateTokenAfterSell(tokenMint, transaction.txid, transaction.solBalanceAfterSell, transaction.solBalanceBeforeSell, tokenObject.marketCap, tokenObject.priceIncrease)
+        if(transaction.txid == "error")
+        {
+            await new Promise((resolve) => setTimeout(resolve, 800));
+
+                transaction = await sellMemeToken(tokenMint, tokenObject.amount)
+                if(transaction.txid != "error")
+                    await updateTokenAfterSell(tokenMint, transaction.txid, transaction.solBalanceAfterSell, transaction.solBalanceBeforeSell, tokenObject.marketCap, tokenObject.priceIncrease)
+        }
+        else
+        {
+            await updateTokenAfterSell(tokenMint, transaction.txid, transaction.solBalanceAfterSell, transaction.solBalanceBeforeSell, tokenObject.marketCap, tokenObject.priceIncrease)
+        }
     }
     //For testing
     //await updateTokenAfterSell(tokenMint, "tid", 110, 120, tokenObject.marketCap, tokenObject.priceIncrease)
